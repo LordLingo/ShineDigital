@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shine Digital</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Figtree:wght@300..900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0c0913}
+.s-root{--bg:#0c0913;--bg2:#110c1b;--card:#171124;--card2:#1f1733;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.18);--fg:#f3eff9;--mut:#aca3c1;--acc:#c99df4;--acc2:#ecd2fc;--acc-rgb:201,157,244;--orc:#b57cff;--ink:#1a1020;--disp:'Bricolage Grotesque','Segoe UI',system-ui,-apple-system,sans-serif;--body:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;--gut:clamp(18px,5vw,56px);--ease:cubic-bezier(.2,.8,.2,1);position:relative;min-height:100vh;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;color-scheme:dark;overflow-x:hidden;overflow-x:clip;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;interpolate-size:allow-keywords}
+.s-root *,.s-root *::before,.s-root *::after{box-sizing:border-box}
+.s-root h1,.s-root h2,.s-root h3,.s-root p,.s-root ul,.s-root ol,.s-root figure{margin:0}
+.s-root ul,.s-root ol{padding:0;list-style:none}
+.s-root a{color:inherit;text-decoration:none}
+.s-root button,.s-root input,.s-root select,.s-root textarea{font:inherit;color:inherit}
+.s-root :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.s-root ::selection{background:rgba(201,157,244,.4);color:#fff}
+.s-skip{position:absolute;left:12px;top:-64px;z-index:100;background:var(--acc);color:var(--ink);padding:12px 18px;border-radius:12px;font-weight:700}
+.s-skip:focus{top:12px}
+.s-wrap{width:100%;max-width:1304px;margin-inline:auto;padding-inline:var(--gut)}
+.s-sec{position:relative;padding-block:clamp(64px,9vw,112px)}
+.s-h2{font-family:var(--disp);font-weight:700;font-stretch:88%;font-optical-sizing:auto;letter-spacing:-.032em;line-height:1.03;font-size:clamp(2.1rem,6.8vw,4rem);text-wrap:balance}
+.s-lead{color:var(--mut);font-size:clamp(1.0625rem,2.3vw,1.25rem);line-height:1.55;max-width:54ch;text-wrap:pretty}
+.s-kick{display:inline-flex;align-items:center;gap:.65em;font-weight:600;font-size:.95rem;color:var(--acc)}
+.s-kick::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(var(--acc-rgb),.16),0 0 16px 2px rgba(var(--acc-rgb),.7)}
+.s-sechd{display:grid;gap:18px;justify-items:start;margin-bottom:clamp(32px,5vw,52px)}
+.s-sp{display:inline-block;flex:none;width:.8em;height:.8em;background:currentColor;clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%)}
+.s-ck{flex:none;position:relative;width:22px;height:22px;border-radius:50%;background:rgba(var(--acc-rgb),.14)}
+.s-ck::after{content:"";position:absolute;left:7.5px;top:4.5px;width:6px;height:10px;border:solid var(--acc);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.s-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:54px;padding:0 1.7em;border-radius:99px;border:1px solid transparent;font-family:var(--body);font-weight:700;font-size:1.0625rem;line-height:1;letter-spacing:.005em;cursor:pointer;isolation:isolate;overflow:hidden;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:transform .3s var(--ease),box-shadow .35s,background-color .3s,border-color .3s,color .3s}
+.s-btn::after{content:"";position:absolute;z-index:-1;top:-30%;bottom:-30%;left:0;width:36%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg) translateX(-160%);opacity:0;pointer-events:none}
+.s-btn-p{background:var(--acc);color:var(--ink);box-shadow:0 12px 32px -12px rgba(var(--acc-rgb),.65)}
+.s-btn-g{background:rgba(255,255,255,.04);color:var(--fg);border-color:var(--line2)}
+.s-root .s-btn-p,.s-root .s-skip{color:var(--ink)}
+.s-btn-s{min-height:44px;padding:0 1.2em;font-size:.95rem}
+.s-btn:active{transform:scale(.97)}
+@media(hover:hover){.s-btn:hover{transform:translateY(-2px)}.s-btn-p:hover{box-shadow:0 18px 40px -12px rgba(var(--acc-rgb),.85)}.s-btn-g:hover{border-color:rgba(var(--acc-rgb),.6);background:rgba(var(--acc-rgb),.08)}.s-btn:active{transform:scale(.97)}}
+.s-hd{position:sticky;top:0;z-index:50;background:rgba(12,9,19,.74);-webkit-backdrop-filter:saturate(1.5) blur(16px);backdrop-filter:saturate(1.5) blur(16px);border-bottom:1px solid var(--line)}
+.s-hd-in{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px}
+.s-logo{display:inline-flex;align-items:center;min-height:44px;line-height:0}
+.s-lg{display:block;height:46px;width:auto;max-width:100%;transform-origin:left center;transition:filter .4s var(--ease),transform .4s var(--ease)}
+.s-foot .s-lg{height:88px}
+@media(hover:hover){.s-logo:hover .s-lg{filter:drop-shadow(0 0 14px rgba(181,124,255,.55)) brightness(1.08);transform:scale(1.03)}}
+.s-logo:active .s-lg{transform:scale(.97)}
+
+
+.s-nav{display:none;gap:clamp(18px,2.6vw,34px)}
+.s-nav a{position:relative;padding:12px 2px;font-weight:500;font-size:.98rem;color:var(--mut);transition:color .25s}
+.s-nav a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;border-radius:2px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+@media(hover:hover){.s-nav a:hover{color:var(--fg)}.s-nav a:hover::after{transform:scaleX(1)}}
+.s-hd-r{display:flex;align-items:center;gap:10px}
+.s-lang{display:none;align-items:center;gap:2px;padding:4px;border:1px solid var(--line2);border-radius:99px;font-size:.8rem;font-weight:600}
+.s-lang button{display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:0 11px;border-radius:99px;border:0;background:transparent;color:var(--mut);font:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:background-color .25s,color .25s}
+.s-lang button[aria-pressed="true"]{background:rgba(255,255,255,.12);color:var(--fg)}
+.s-lang-f{display:inline-flex}
+@media(hover:hover){.s-lang button:hover{color:var(--fg)}}
+.s-burger{position:relative;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.04);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.s-burger i{position:absolute;left:13px;right:13px;height:2px;border-radius:2px;background:var(--fg);transition:transform .35s var(--ease)}
+.s-burger i:first-child{top:17px}
+.s-burger i:last-child{top:25px}
+.s-burger[aria-expanded="true"] i:first-child{transform:translateY(4px) rotate(45deg)}
+.s-burger[aria-expanded="true"] i:last-child{transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:359px){.s-lg{height:40px}.s-btn-s{padding:0 1em}}
+@media(min-width:760px){.s-lang{display:inline-flex}}
+@media(min-width:920px){.s-nav{display:flex}.s-burger{display:none}.s-hd-in{min-height:76px}.s-lg{height:56px}}
+.s-menu{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;padding:8px var(--gut) 28px;background:rgba(12,9,19,.97);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--line2);box-shadow:0 40px 60px -30px rgba(0,0,0,.8)}
+.s-menu a{display:flex;align-items:center;min-height:58px;border-bottom:1px solid var(--line);font-family:var(--disp);font-weight:700;font-stretch:90%;font-size:1.65rem;letter-spacing:-.02em}
+.s-menu .s-btn{margin-top:20px;border:0;justify-content:center;font-family:var(--body);font-size:1.05rem;letter-spacing:0}
+.s-menu p{margin-top:18px;color:var(--mut);font-size:.95rem}
+.s-menu-lang{display:flex;align-items:center;gap:10px;margin-top:18px;color:var(--mut);font-size:.95rem}
+.s-menu-lang button{min-height:44px;min-width:60px;padding:0 16px;border-radius:99px;border:1px solid var(--line2);background:rgba(255,255,255,.04);color:var(--fg);font:inherit;font-weight:700;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.s-menu-lang button[aria-pressed="true"]{background:var(--acc);border-color:transparent;color:var(--ink)}
+@media(min-width:920px){.s-menu{display:none}}
+.s-hero{position:relative;padding-block:clamp(36px,8vw,72px) clamp(56px,9vw,110px);overflow:clip}
+.s-hero-bg{position:absolute;inset:0;pointer-events:none}
+.s-hero-bg::before{content:"";position:absolute;width:min(900px,150vw);aspect-ratio:1;right:-20%;top:-28%;background:radial-gradient(closest-side,rgba(181,124,255,.2),transparent 70%)}
+.s-hero-in{position:relative;display:grid;gap:clamp(36px,7vw,64px);align-items:center}
+@media(min-width:960px){.s-hero-in{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);min-height:700px}}
+.s-hero-tx{display:grid;gap:clamp(18px,3vw,28px);justify-items:start}
+.s-h1{font-family:var(--disp);font-weight:800;font-stretch:86%;font-optical-sizing:auto;letter-spacing:-.04em;line-height:.98;font-size:clamp(2.6rem,9.2vw,5.4rem)}
+.s-ln{display:block;text-shadow:0 0 38px rgba(var(--acc-rgb),.16)}
+.s-cta{display:flex;flex-wrap:wrap;gap:12px;width:100%}
+@media(max-width:559px){.s-cta .s-btn{width:100%}}
+.s-checks{display:flex;flex-wrap:wrap;gap:10px 26px;color:var(--mut);font-size:.98rem}
+.s-checks li{display:flex;align-items:center;gap:.6em}
+.s-hero-vis{--rx:0deg;--ry:0deg;position:relative;display:grid;place-items:center;perspective:1200px}
+.s-stage{--ph:min(300px,72vw);position:relative;width:100%;display:grid;place-items:center;padding-block:24px}
+@media(min-width:960px){.s-stage{--ph:min(330px,26vw)}}
+.s-lamp{position:absolute;inset:-6% -14%;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--acc-rgb),.32),rgba(181,124,255,.14) 52%,transparent 74%);pointer-events:none}
+.s-phone{position:relative;width:var(--ph);aspect-ratio:9/18.5;padding:calc(var(--ph)*.028);border-radius:calc(var(--ph)*.15);background:linear-gradient(150deg,#3a2c57,#120c1f 55%,#2a1f42);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.6);transform:rotateY(var(--ry)) rotateX(var(--rx));transition:transform .3s var(--ease);transform-style:preserve-3d}
+.s-notch{position:absolute;z-index:5;top:calc(var(--ph)*.05);left:50%;width:calc(var(--ph)*.26);height:calc(var(--ph)*.05);margin-left:calc(var(--ph)*-.13);border-radius:99px;background:#05030a}
+.s-screen{position:relative;height:100%;border-radius:calc(var(--ph)*.125);overflow:hidden;background:#100a1a;font-size:calc(var(--ph)*.046);line-height:1.3;color:#f3eff9}
+.s-sheen{position:absolute;z-index:6;inset:calc(var(--ph)*.028);border-radius:calc(var(--ph)*.125);overflow:hidden;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.15) 0,rgba(255,255,255,0) 26%)}
+.s-sheen::after{content:"";position:absolute;top:-10%;bottom:-10%;left:-30%;width:22%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-16deg);opacity:0}
+.s-site{height:100em;display:flex;flex-direction:column}
+.s-ms{flex:none;position:relative;display:flex;flex-direction:column;gap:.95em;padding:1.5em 1.4em}
+.s-ms1{height:44em;padding-top:3.6em;overflow:hidden}
+.s-ms2{height:30em;background:#160f25;justify-content:center}
+.s-ms3{height:26em;justify-content:flex-end;overflow:hidden}
+.s-mtop{display:flex;align-items:center;justify-content:space-between}
+.s-mlogo-img{display:block;height:3.1em;width:auto;margin:-.55em 0}
+.s-mlogo-img{flex:none}
+.s-mtag{font-size:.56em;font-weight:700;letter-spacing:.14em;color:var(--acc);border:1px solid rgba(var(--acc-rgb),.55);padding:.45em .85em;border-radius:99px}
+.s-mnav{display:flex;gap:1.1em;font-size:.58em;font-weight:600;letter-spacing:.14em;color:#9d94b4}
+.s-mh{font-family:var(--disp);font-weight:800;font-stretch:84%;font-size:2.4em;line-height:.98;letter-spacing:-.04em;text-wrap:balance;margin-top:.5em}
+.s-mp{font-size:.84em;line-height:1.45;color:#b8afcd;max-width:19em}
+.s-mbtn{align-self:flex-start;background:var(--acc);color:var(--ink);font-weight:700;font-size:.84em;padding:.85em 1.35em;border-radius:99px;margin-top:.3em}
+.s-orb{position:absolute;right:-6em;bottom:-7em;width:19em;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(var(--acc-rgb),.6),rgba(181,124,255,.28) 62%,transparent)}
+.s-orb::after{content:"";position:absolute;inset:3.2em;border-radius:50%;border:1px solid rgba(255,255,255,.35)}
+.s-mst{font-family:var(--disp);font-weight:800;font-stretch:86%;font-size:1.7em;line-height:1.02;letter-spacing:-.035em}
+.s-mc{display:flex;align-items:center;gap:.8em;padding:.95em 1em;border-radius:1em;background:#201734;border:1px solid rgba(255,255,255,.08);font-size:.86em;font-weight:600}
+.s-mi{flex:none;display:grid;place-items:center;width:2.1em;aspect-ratio:1;border-radius:50%;background:rgba(var(--acc-rgb),.16);color:var(--acc)}
+.s-mi .s-sp{width:.9em;height:.9em}
+.s-mfoot{font-size:.62em;letter-spacing:.06em;color:#8f86a8}
+.s-chip{position:absolute;z-index:7;display:flex;align-items:center;gap:.55em;padding:.6em 1em .6em .8em;border-radius:99px;background:rgba(23,17,36,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--line2);box-shadow:0 14px 34px -14px rgba(0,0,0,.7);font-size:.82rem;font-weight:600;line-height:1.2;white-space:nowrap}
+.s-chip .s-sp{color:var(--acc);width:.9em;height:.9em}
+.s-chip-a{left:0;top:12%}
+.s-chip-b{right:0;top:47%}
+.s-chip-c{left:2%;bottom:7%}
+@media(min-width:960px){.s-chip{font-size:.9rem}.s-chip-a{left:-6%}.s-chip-b{right:-8%}.s-chip-c{left:-2%}}
+.s-menu p a{display:inline;min-height:0;border:0;font:inherit;color:var(--fg);text-decoration:underline}
+.s-ms3 .s-orb{top:-7em;bottom:auto}
+.s-mq{overflow:hidden;border-block:1px solid var(--line);background:var(--bg2);padding-block:22px}
+.s-mq-track{display:flex;width:max-content}
+.s-mq-set{display:flex;align-items:center;flex:none;gap:clamp(22px,4vw,44px);padding-right:clamp(22px,4vw,44px)}
+.s-mq-set li{display:flex;align-items:center;font-family:var(--disp);font-weight:700;font-stretch:88%;font-size:clamp(1.3rem,3.6vw,2.1rem);letter-spacing:-.02em;white-space:nowrap}
+.s-mq-set .s-mq-d{color:var(--acc)}
+.s-mq-d .s-sp{width:.7em;height:.7em}
+@media(hover:hover){.s-mq:hover .s-mq-track{animation-play-state:paused}}
+.s-proc{display:grid;gap:clamp(36px,6vw,64px)}
+@media(min-width:960px){.s-proc{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:start;gap:clamp(48px,7vw,110px)}.s-proc .s-sechd{position:sticky;top:120px;margin-bottom:0}}
+.s-steps{position:relative;display:grid;gap:18px}
+.s-steps::before,.s-steps::after{content:"";position:absolute;left:21px;top:24px;bottom:24px;width:2px;border-radius:2px}
+.s-steps::before{background:var(--line)}
+.s-steps::after{background:linear-gradient(var(--acc),var(--acc2));transform-origin:top;box-shadow:0 0 14px rgba(var(--acc-rgb),.6)}
+.s-step{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:clamp(14px,3vw,26px);align-items:start}
+.s-node{position:relative;z-index:1;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--bg);border:1px solid rgba(var(--acc-rgb),.55);font-family:var(--disp);font-weight:800;font-size:1.05rem;color:var(--acc);box-shadow:0 0 0 6px var(--bg),0 0 24px -4px rgba(var(--acc-rgb),.5)}
+.s-stl{margin-bottom:8px;font-weight:700;font-size:.98rem;color:var(--acc)}
+.s-h3{font-family:var(--disp);font-weight:700;font-stretch:90%;font-size:clamp(1.4rem,3.6vw,1.9rem);letter-spacing:-.025em;line-height:1.1;text-wrap:balance}
+.s-tx{margin-top:12px;color:var(--mut)}
+.s-card{position:relative;isolation:isolate;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,34px);transition:border-color .35s,transform .45s var(--ease)}
+.s-card::before{content:"";position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .4s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(var(--acc-rgb),.15),transparent 62%)}
+.s-card::after{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;width:26%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.09),transparent);transform:skewX(-18deg) translateX(-160%);opacity:0;pointer-events:none}
+@media(hover:hover){.s-card:hover{border-color:rgba(var(--acc-rgb),.38);transform:translateY(-4px)}.s-card:hover::before{opacity:1}}
+.s-vz{position:relative;width:64px;height:64px;margin-bottom:18px;pointer-events:none}
+.s-vz-1 i{position:absolute;inset:0;margin:auto;border-radius:50%;border:1.5px solid rgba(var(--acc-rgb),.55)}
+.s-vz-1 i:nth-child(1){width:14px;height:14px;border:0;background:var(--acc);box-shadow:0 0 18px rgba(var(--acc-rgb),.9)}
+.s-vz-1 i:nth-child(2){width:38px;height:38px}
+.s-vz-1 i:nth-child(3){width:64px;height:64px;opacity:.4}
+.s-vz-2 i{position:absolute;left:0;height:6px;border-radius:4px;background:rgba(255,255,255,.22);transform-origin:left}
+.s-vz-2 i:nth-child(1){top:8px;width:70%;background:var(--acc)}
+.s-vz-2 i:nth-child(2){top:24px;width:100%}
+.s-vz-2 i:nth-child(3){top:38px;width:84%}
+.s-vz-2 i:nth-child(4){top:52px;width:50%}
+.s-vz-3{height:32px;margin:16px 0 34px;border-radius:99px;background:var(--acc)}
+.s-vz-3::after{content:"";position:absolute;top:4px;left:36px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+@media(min-width:640px){.s-vz{position:absolute;top:24px;right:24px;margin:0}.s-vz-3{top:40px;margin:0}.s-step .s-card{padding-right:112px}}
+.s-ex-stage{--rx:0deg;--ry:0deg;position:relative;display:grid;place-items:center;perspective:1400px;padding-block:clamp(16px,4vw,48px)}
+.s-ex-glow{position:absolute;inset:6% 2%;border-radius:50%;background:radial-gradient(closest-side,rgba(108,198,255,.2),transparent 72%);pointer-events:none}
+.s-ex-ph{--ph:min(300px,76vw);position:relative;display:grid;place-items:center}
+.s-bw{display:none;position:relative;width:84%;justify-self:start;border-radius:18px;overflow:hidden;background:#0e1722;border:1px solid var(--line2);box-shadow:0 60px 120px -40px rgba(0,0,0,.9);transform:rotateY(calc(var(--ry)*.5)) rotateX(calc(var(--rx)*.5));transition:transform .35s var(--ease)}
+.s-bw-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#0a111a;border-bottom:1px solid rgba(255,255,255,.08)}
+.s-bw-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.18)}
+.s-bw-bar span{margin-left:12px;padding:5px 14px;border-radius:99px;background:rgba(255,255,255,.07);font-size:.78rem;color:#9db0c2}
+@media(min-width:900px){.s-ex-stage{min-height:600px}.s-bw{display:block}.s-ex-ph{--ph:min(250px,19vw);position:absolute;right:1%;bottom:0}}
+.s-na{--c:#6cc6ff;--co:#ff7a45;position:relative;background:#0e1722;color:#e8f1f8}
+.s-na-top{display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,3.4vw,44px)}
+.s-na-logo{font-family:var(--disp);font-weight:800;font-stretch:80%;font-size:1.25rem;line-height:.88;letter-spacing:.03em}
+.s-na-logo b{display:block;color:var(--c);font-weight:800}
+.s-na-nav{display:flex;gap:26px;font-size:.9rem;color:#9db0c2}
+.s-na-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px;align-items:center;padding:clamp(20px,4vw,52px) clamp(20px,3.4vw,44px) clamp(36px,5vw,72px)}
+.s-na-h{font-family:var(--disp);font-weight:800;font-stretch:84%;font-size:clamp(2rem,4.2vw,3.5rem);line-height:.96;letter-spacing:-.04em;text-wrap:balance}
+.s-na-p{margin-top:16px;max-width:30ch;color:#9db0c2}
+.s-na-b{display:inline-flex;margin-top:22px;padding:.95em 1.5em;border-radius:99px;background:var(--c);color:#06121c;font-weight:700;font-size:.95rem}
+.s-na-svc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.s-na-svc span{padding:.4em .85em;border-radius:99px;border:1px solid rgba(255,255,255,.16);font-size:.8rem;color:#c8d6e2}
+.s-dial{position:relative;width:100%;max-width:340px;aspect-ratio:1;justify-self:center;border-radius:50%}
+.s-dial-t{position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(rgba(108,198,255,.9) 0 1deg,transparent 1deg 6deg);-webkit-mask:radial-gradient(farthest-side,transparent 84%,#000 85%);mask:radial-gradient(farthest-side,transparent 84%,#000 85%)}
+.s-dial-c{position:absolute;inset:-2%;border-radius:50%;background:conic-gradient(from 135deg,#0e1722 0 90deg,transparent 90deg)}
+.s-dial-r{position:absolute;inset:17%;border-radius:50%;border:1px solid rgba(255,255,255,.14)}
+.s-dial-n{position:absolute;left:50%;top:50%;width:.22em;height:40%;margin-left:-.11em;border-radius:3px;background:linear-gradient(var(--co),rgba(255,122,69,0));transform-origin:50% 0;transform:rotate(246deg)}
+.s-dial-h{position:absolute;left:50%;top:50%;width:.9em;height:.9em;margin:-.45em;border-radius:50%;background:var(--co);box-shadow:0 0 0 .35em #0e1722,0 0 1.4em var(--co)}
+.s-dial-k{position:absolute;left:0;right:0;bottom:27%;text-align:center;font-family:var(--disp);font-weight:700;font-size:.85em;letter-spacing:.24em;color:#8aa0b4}
+.s-na-m{height:100%;padding:3.4em 1.4em 1.4em;display:flex;flex-direction:column;gap:.9em}
+.s-na-m .s-na-top{padding:0}
+.s-na-m .s-na-logo{font-size:1.15em}
+.s-na-m .s-na-h{font-size:2.4em}
+.s-na-m .s-na-p{margin-top:0;font-size:.84em;color:#9db0c2}
+.s-na-m .s-na-b{margin-top:0;font-size:.84em}
+.s-na-m .s-dial{width:15em;margin-top:auto;margin-bottom:.4em;font-size:.9em}
+.s-na-m .s-na-svc{margin-top:0}
+.s-na-m .s-na-svc span{font-size:.7em}
+.s-burg2{display:grid;gap:.34em}
+.s-burg2 i{width:1.5em;height:2px;border-radius:2px;background:#e8f1f8}
+.s-cap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:clamp(20px,4vw,40px)}
+.s-cap-t{display:grid;gap:2px}
+.s-cap-t b{font-family:var(--disp);font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+.s-cap-t span{color:var(--mut)}
+.s-note{margin-top:22px;max-width:62ch;color:var(--mut);font-size:.92rem}
+.s-mq-set{min-width:100vw;justify-content:space-around}
+.s-na-m .s-na-b{align-self:flex-start}
+.s-ben{background:var(--bg2);border-block:1px solid var(--line)}
+.s-ben-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 40px;margin-bottom:clamp(32px,5vw,52px)}
+.s-ben-top .s-sechd{margin-bottom:0;max-width:780px}
+.s-bento{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:760px){.s-bento{grid-template-columns:repeat(12,minmax(0,1fr))}.s-b1{grid-column:span 7}.s-b2{grid-column:span 5}.s-b3{grid-column:span 5}.s-b4{grid-column:span 7}}
+.s-tile{display:flex;flex-direction:column;justify-content:space-between;gap:44px;min-height:270px;background:var(--bg)}
+.s-tile .s-h3{font-size:clamp(1.35rem,3vw,1.75rem)}
+.s-v1{position:relative;display:grid;gap:10px;width:min(100%,280px);height:120px;align-content:start}
+.s-v1 i{display:block;height:10px;border-radius:6px;background:rgba(255,255,255,.15);transform-origin:left}
+.s-v1 i:nth-child(1){width:62%;height:22px;background:var(--acc)}
+.s-v1 i:nth-child(2){width:100%}
+.s-v1 i:nth-child(3){width:84%}
+.s-v1 i:nth-child(4){width:34%;height:30px;border-radius:99px;background:rgba(var(--acc-rgb),.22);border:1px solid rgba(var(--acc-rgb),.6)}
+.s-v1 .s-sp{position:absolute;right:4%;top:0;width:28px;height:28px;color:var(--acc)}
+.s-v2{position:relative;height:120px}
+.s-v2 i{position:absolute;top:4px;height:112px;border:1.5px solid rgba(255,255,255,.4);border-radius:12px}
+.s-v2 i:nth-child(1){left:0;width:172px}
+.s-v2 i:nth-child(2){left:196px;width:64px;border-color:var(--acc);border-radius:16px;background:rgba(var(--acc-rgb),.1);box-shadow:0 0 28px -6px rgba(var(--acc-rgb),.6)}
+.s-v2 i:nth-child(1)::after,.s-v2 i:nth-child(2)::after{content:"";position:absolute;left:12%;right:12%;top:14px;height:6px;border-radius:4px;background:rgba(255,255,255,.28)}
+.s-v3{position:relative;display:flex;align-items:center;justify-content:space-between;height:120px;max-width:300px}
+.s-v3 .l{position:absolute;left:14px;right:14px;top:50%;height:2px;margin-top:-1px;background:var(--line2)}
+.s-v3 .l::after{content:"";position:absolute;inset:0;background:var(--acc);transform-origin:left;box-shadow:0 0 12px rgba(var(--acc-rgb),.7)}
+.s-v3 b{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;background:var(--bg);border:2px solid var(--line2)}
+.s-v3 b:last-child{border-color:var(--acc);box-shadow:0 0 22px -2px rgba(var(--acc-rgb),.7)}
+.s-v3 b::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--acc);opacity:.9}
+.s-v4{width:120px;height:120px;overflow:visible}
+.s-v4 circle,.s-v4 path{fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.s-v4 .r0{stroke:var(--line2)}
+.s-v4 .r1{stroke:var(--acc);transform:rotate(-90deg);transform-origin:60px 60px}
+.s-v4 .ck{stroke:var(--acc)}
+.s-price-g{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));align-items:stretch}
+.s-plan{display:flex;flex-direction:column;gap:24px}
+.s-plan-hd{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.s-lad{display:flex;gap:5px}
+.s-lad i{width:22px;height:8px;border-radius:4px;background:rgba(255,255,255,.14)}
+.s-lad i.on{background:var(--acc);box-shadow:0 0 12px rgba(var(--acc-rgb),.6)}
+.s-plan .s-h3{font-size:clamp(1.7rem,3.4vw,2.1rem)}
+.s-plan-tag{margin-top:6px;color:var(--mut)}
+.s-pr{display:flex;align-items:baseline;gap:6px;font-family:var(--disp);font-variant-numeric:tabular-nums}
+.s-pc{font-size:1.6rem;font-weight:700;color:var(--mut)}
+.s-pn{font-size:clamp(3.2rem,7vw,4.2rem);font-weight:800;font-stretch:88%;letter-spacing:-.04em;line-height:1}
+.s-pu{font-family:var(--body);font-size:.9rem;font-weight:600;letter-spacing:.06em;color:var(--mut)}
+.s-pc-off{display:none}
+.s-ft{display:grid;gap:13px}
+.s-ft li{display:flex;align-items:flex-start;gap:12px;line-height:1.45}
+.s-ft .s-ck{margin-top:1px}
+.s-ft .s-ft-inh{color:var(--acc);font-weight:600}
+.s-ft .s-ft-inh .s-sp{margin:4px 5px 0 4px}
+.s-ft-n{color:var(--mut);font-size:.88rem}
+.s-plan .s-btn{margin-top:auto;width:100%}
+.s-plan-m{border-color:rgba(var(--acc-rgb),.45);background:var(--card2)}
+.s-faq{display:grid;gap:clamp(32px,6vw,64px)}
+@media(min-width:960px){.s-faq{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start}.s-faq .s-sechd{position:sticky;top:120px;margin-bottom:0}}
+.s-qs{display:grid;gap:12px}
+.s-q{border:1px solid var(--line);border-radius:20px;background:var(--card);transition:border-color .3s,background-color .3s}
+.s-q[open]{border-color:rgba(var(--acc-rgb),.4);background:var(--card2)}
+.s-q summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px;padding:14px clamp(18px,3vw,28px);cursor:pointer;list-style:none;font-family:var(--disp);font-weight:600;font-stretch:92%;font-size:clamp(1.1rem,2.6vw,1.35rem);letter-spacing:-.015em;line-height:1.25;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.s-q summary::-webkit-details-marker{display:none}
+.s-q-i{flex:none;position:relative;width:32px;height:32px;border-radius:50%;border:1px solid var(--line2);transition:transform .45s var(--ease),background-color .3s,border-color .3s}
+.s-q-i::before,.s-q-i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;border-radius:2px;background:var(--acc)}
+.s-q-i::after{transform:rotate(90deg);transition:transform .45s var(--ease)}
+.s-q[open] .s-q-i{transform:rotate(180deg);background:rgba(var(--acc-rgb),.14);border-color:rgba(var(--acc-rgb),.5)}
+.s-q[open] .s-q-i::after{transform:rotate(0deg)}
+.s-q-a{padding:0 clamp(18px,3vw,28px) 24px;max-width:62ch;color:var(--mut)}
+@media(hover:hover){.s-q:hover{border-color:rgba(var(--acc-rgb),.3)}}
+@supports (selector(::details-content)){.s-q::details-content{block-size:0;overflow:hidden;opacity:0;transition:block-size .45s var(--ease),opacity .35s,content-visibility .45s allow-discrete}.s-q[open]::details-content{block-size:auto;opacity:1}}
+.s-form-in{display:grid;gap:clamp(36px,6vw,72px)}
+.s-form-l{display:grid;gap:22px;justify-items:start}
+@media(min-width:960px){.s-form-in{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}.s-form-l{position:sticky;top:110px}}
+.s-notes{display:grid;gap:14px;color:var(--mut)}
+.s-notes li{display:flex;align-items:flex-start;gap:12px}
+.s-notes .s-sp{margin-top:.5em;color:var(--acc)}
+.s-mail{color:var(--mut)}
+.s-mail a{font-weight:700;color:var(--fg);border-bottom:1px solid rgba(var(--acc-rgb),.6);padding-bottom:1px;overflow-wrap:anywhere}
+.s-fm{position:relative;display:grid;gap:16px;padding:clamp(20px,4vw,36px);border-radius:28px;background:var(--card);border:1px solid var(--line2)}
+.s-fgrid{display:grid;gap:16px}
+@media(min-width:640px){.s-fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.s-fgrid .s-f-w{grid-column:1/-1}}
+.s-f{display:grid;gap:8px;min-width:0}
+.s-f>span{font-weight:600;font-size:.95rem}
+.s-f>span em{font-style:normal;color:var(--acc)}
+.s-in{display:block;width:100%;min-height:54px;padding:0 16px;border-radius:14px;border:1px solid var(--line2);background:rgba(255,255,255,.04);font-size:1rem;line-height:1.3;color:var(--fg);-webkit-appearance:none;appearance:none;transition:border-color .25s,background-color .25s,box-shadow .25s}
+textarea.s-in{min-height:132px;padding:14px 16px;resize:vertical}
+.s-in::placeholder{color:#8f86a8}
+.s-in:focus,.s-in:focus-visible{outline:none;border-color:var(--acc);background:rgba(var(--acc-rgb),.06);box-shadow:0 0 0 4px rgba(var(--acc-rgb),.16)}
+.s-in:user-invalid{border-color:#ff8f7e}
+.s-sel{position:relative}
+.s-sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;margin-top:-6px;border:solid var(--mut);border-width:0 2px 2px 0;transform:rotate(45deg);pointer-events:none}
+select.s-in{padding-right:44px;cursor:pointer}
+select.s-in option{background:#171124;color:#f3eff9}
+.s-fine{color:var(--mut);font-size:.88rem;line-height:1.5}
+.s-fm>.s-btn{width:100%}
+.s-ok{display:grid;gap:14px;padding:20px;border-radius:20px;background:rgba(var(--acc-rgb),.08);border:1px solid rgba(var(--acc-rgb),.45)}
+.s-ok-t{font-family:var(--disp);font-weight:700;font-size:1.4rem;letter-spacing:-.02em}
+.s-ok-pre{margin:0;max-height:220px;overflow:auto;padding:14px;border-radius:12px;background:rgba(0,0,0,.28);color:#dcd5ea;font:400 .9rem/1.5 var(--body);white-space:pre-wrap;overflow-wrap:anywhere;-webkit-user-select:text;user-select:text}
+.s-ok-b{display:flex;flex-wrap:wrap;gap:10px}
+.s-ok-b .s-btn{flex:1 1 200px}
+.s-end{position:relative;overflow:clip;text-align:center;padding-block:clamp(80px,11vw,140px);border-top:1px solid var(--line);background:radial-gradient(520px circle at var(--mx,50%) var(--my,45%),rgba(var(--acc-rgb),.17),transparent 65%),var(--bg)}
+.s-end-in{display:grid;gap:24px;justify-items:center}
+.s-end .s-h2{max-width:14ch;font-size:clamp(2.4rem,8vw,5.6rem)}
+.s-end .s-lead{margin-inline:auto}
+.s-end-b{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 24px}
+.s-end-mail{font-weight:700;border-bottom:1px solid rgba(var(--acc-rgb),.6);padding-bottom:1px;overflow-wrap:anywhere}
+@media(max-width:559px){.s-end-b .s-btn{width:100%;padding-inline:1.1em}}
+.s-contact{display:grid;gap:10px;justify-items:start}
+.s-mail-wa{display:flex;align-items:flex-start;gap:.6em}
+.s-mail-wa>span{min-width:0}
+.s-wa-svg{display:block;flex:none;fill:currentColor}
+.s-mail-wa .s-wa-svg{width:1.3em;height:1.3em;margin-top:.15em;color:#25d366}
+.s-btn .s-wa-svg{width:1.35em;height:1.35em;color:#25d366}
+.s-wa{position:fixed;z-index:60;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,calc(env(safe-area-inset-bottom,0px) + 12px));display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:6px 20px 6px 6px;border-radius:99px;background:rgba(23,17,36,.88);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border:1px solid rgba(var(--acc-rgb),.4);box-shadow:0 16px 36px -12px rgba(0,0,0,.7);color:var(--fg);font-weight:700;font-size:1rem;line-height:1;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent;transition:opacity .35s var(--ease),visibility 0s,translate .45s var(--ease),transform .3s var(--ease),border-color .3s,box-shadow .35s}
+.s-wa-b{position:relative;flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 6px 16px -6px rgba(37,211,102,.75)}
+.s-wa-b::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;opacity:0;pointer-events:none}
+.s-wa-b .s-wa-svg{width:26px;height:26px}
+.s-wa-off{opacity:0;visibility:hidden;pointer-events:none;translate:0 16px;transition:opacity .3s var(--ease),visibility 0s linear .3s,translate .4s var(--ease)}
+@media(max-width:519px){.s-wa-x{display:none}}
+@media(hover:hover){.s-wa:hover{transform:translateY(-3px);border-color:rgba(37,211,102,.7);box-shadow:0 20px 40px -12px rgba(0,0,0,.75),0 0 30px -6px rgba(37,211,102,.5)}}
+.s-wa:active{transform:scale(.97)}
+.s-foot{border-top:1px solid var(--line);padding-block:36px}
+.s-foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;color:var(--mut);font-size:.95rem}
+.s-foot a.s-top{display:inline-flex;align-items:center;min-height:44px;color:var(--fg);font-weight:600}
+@keyframes s-glint{0%{transform:skewX(-20deg) translateX(-160%);opacity:0}15%{opacity:1}100%{transform:skewX(-20deg) translateX(560%);opacity:0}}
+@keyframes s-glint2{0%{transform:skewX(-18deg) translateX(-160%);opacity:0}15%{opacity:1}100%{transform:skewX(-18deg) translateX(560%);opacity:0}}
+@keyframes s-rise{from{opacity:0;translate:0 22px}}
+@keyframes s-on{0%{opacity:.06;text-shadow:none;animation-timing-function:steps(1,end)}9%{opacity:.9;text-shadow:0 0 30px rgba(var(--acc-rgb),.85);animation-timing-function:steps(1,end)}19%{opacity:.08;text-shadow:none;animation-timing-function:steps(1,end)}33%{opacity:.75;text-shadow:0 0 26px rgba(var(--acc-rgb),.7);animation-timing-function:steps(1,end)}41%{opacity:.25;text-shadow:none;animation-timing-function:ease-out}58%{opacity:1;text-shadow:0 0 52px rgba(var(--acc-rgb),.6)}100%{opacity:1;text-shadow:0 0 38px rgba(var(--acc-rgb),.16)}}
+@keyframes s-phone-in{from{opacity:0;translate:0 48px;scale:.94}}
+@keyframes s-bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes s-float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes s-breathe{0%,100%{opacity:.8;scale:1}50%{opacity:1;scale:1.07}}
+@keyframes s-scroll{0%,10%{transform:translateY(0)}90%,100%{transform:translateY(-56%)}}
+@keyframes s-streak{0%{translate:0 0;opacity:0}6%{opacity:1}22%{translate:620% 0;opacity:0}100%{translate:620% 0;opacity:0}}
+@keyframes s-mq{to{transform:translateX(-50%)}}
+@keyframes s-rail{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes s-rv{from{opacity:0;translate:0 36px}}
+@keyframes s-ping{0%{scale:.35;opacity:.9}100%{scale:1.15;opacity:0}}
+@keyframes s-bars{0%,12%{scale:0 1}40%,100%{scale:1 1}}
+@keyframes s-tog{0%,20%{translate:-32px 0}45%,100%{translate:0 0}}
+@keyframes s-togbg{0%,20%{background-color:rgba(255,255,255,.16)}45%,100%{background-color:#c99df4}}
+@keyframes s-twinkle{0%,100%{scale:1;rotate:0deg;opacity:1}50%{scale:.6;rotate:90deg;opacity:.6}}
+@keyframes s-pulse{0%,100%{box-shadow:0 0 22px -6px rgba(var(--acc-rgb),.5)}50%{box-shadow:0 0 42px -2px rgba(var(--acc-rgb),.95)}}
+@keyframes s-line{0%,10%{transform:scaleX(0)}55%,100%{transform:scaleX(1)}}
+@keyframes s-node{0%,8%{scale:0}22%,100%{scale:1}}
+@keyframes s-ring{0%,8%{stroke-dasharray:320;stroke-dashoffset:320}50%,100%{stroke-dasharray:320;stroke-dashoffset:0}}
+@keyframes s-chk{0%,42%{stroke-dasharray:90;stroke-dashoffset:90}70%,100%{stroke-dasharray:90;stroke-dashoffset:0}}
+@keyframes s-needle{0%,100%{transform:rotate(234deg)}50%{transform:rotate(264deg)}}
+@keyframes s-spin{to{rotate:180deg}}
+@keyframes s-wa-in{from{opacity:0;translate:0 28px;scale:.82}}
+@keyframes s-wa-ring{0%{opacity:.75;scale:1}100%{opacity:0;scale:1.8}}
+@media (prefers-reduced-motion:no-preference){
+.s-rise{animation:s-rise .9s var(--ease) backwards;animation-delay:var(--d,0s)}
+.s-d1{--d:.05s}.s-d3{--d:.95s}.s-d4{--d:1.1s}.s-d5{--d:1.25s}
+.s-ln{animation:s-on 1.5s backwards}
+.s-ln:nth-child(1){animation-delay:.15s}.s-ln:nth-child(2){animation-delay:.5s}.s-ln:nth-child(3){animation-delay:.85s}
+.s-hero .s-phone{animation:s-phone-in 1.2s var(--ease) .5s backwards,s-bob 7s ease-in-out 1.7s infinite}
+.s-lamp{animation:s-breathe 7s ease-in-out infinite}
+.s-chip-a{animation:s-float 6s ease-in-out infinite}
+.s-chip-b{animation:s-float 6.8s ease-in-out -2s infinite}
+.s-chip-c{animation:s-float 7.4s ease-in-out -4s infinite}
+.s-hero .s-site{animation:s-scroll 26s ease-in-out 1.8s infinite alternate}
+.s-hero .s-sheen::after{animation:s-streak 8s ease-in-out 2.6s infinite}
+.s-mq-track{animation:s-mq 40s linear infinite}
+.s-vz-1 i:nth-child(2){animation:s-ping 3.2s ease-out infinite}
+.s-vz-1 i:nth-child(3){animation:s-ping 3.2s ease-out 1.1s infinite}
+.s-vz-2 i{animation:s-bars 6s var(--ease) infinite}
+.s-vz-2 i:nth-child(2){animation-delay:.15s}.s-vz-2 i:nth-child(3){animation-delay:.3s}.s-vz-2 i:nth-child(4){animation-delay:.45s}
+.s-vz-3{animation:s-togbg 5s ease-in-out infinite}
+.s-vz-3::after{animation:s-tog 5s var(--ease) infinite}
+.s-v1 i{animation:s-bars 6.5s var(--ease) infinite}
+.s-v1 i:nth-child(2){animation-delay:.12s}.s-v1 i:nth-child(3){animation-delay:.24s}.s-v1 i:nth-child(4){animation-delay:.4s}
+.s-v1 .s-sp{animation:s-twinkle 3.2s ease-in-out infinite}
+.s-v2 i:nth-child(2){animation:s-pulse 3.4s ease-in-out infinite}
+.s-v3 .l::after{animation:s-line 5s var(--ease) infinite}
+.s-v3 b::after{animation:s-node 5s var(--ease) infinite}
+.s-v3 b:nth-child(3)::after{animation-delay:.5s}.s-v3 b:nth-child(4)::after{animation-delay:1s}
+.s-v4 .r1{animation:s-ring 6s var(--ease) infinite}
+.s-v4 .ck{animation:s-chk 6s var(--ease) infinite}
+.s-dial-n{animation:s-needle 5s ease-in-out infinite}
+.s-end-in .s-sp{animation:s-twinkle 3.6s ease-in-out infinite}
+.s-wa{animation:s-wa-in .9s var(--ease) 1.8s backwards}
+.s-wa-b::after{animation:s-wa-ring 2.6s ease-out 2.8s 3}
+}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+.s-btn:hover::after{animation:s-glint .9s var(--ease) both}
+.s-card:hover::after{animation:s-glint2 1.1s var(--ease) both}
+.s-btn:hover .s-sp{animation:s-spin .9s var(--ease) both}
+.s-hero-vis:hover .s-site{animation-play-state:paused}
+}
+@supports (animation-timeline:view()){
+@media (prefers-reduced-motion:no-preference){
+.s-steps::after{animation:s-rail linear both;animation-timeline:view();animation-range:cover 12% cover 62%}
+.s-rv{animation:s-rv linear backwards;animation-timeline:view();animation-range:entry 0% entry 55%}
+}
+}
+@media (prefers-reduced-motion:reduce){
+.s-mq{overflow-x:auto}
+.s-mq-set{min-width:0}
+.s-mq-set:nth-child(2){display:none}
+.s-wa,.s-wa-off{translate:none;transition:opacity .2s linear}
+}
+.s-f>.s-sel{display:block;font-weight:400;font-size:1rem}
+</style>
+</helmet>
+<div class="s-root" lang="{{lang}}">
+<a class="s-skip" href="#continut">{{t.sari_la_continut}}</a>
+<header class="s-hd">
+<div class="s-wrap s-hd-in">
+<a class="s-logo" href="#sus" aria-label="{{t.shine_digital_la_inceput}}" translate="no"><img class="s-lg" src="/_blob/1d9037ba577aafad0da6609b393ccde2" width="514" height="256" alt="Shine Digital"></a>
+<nav class="s-nav" aria-label="{{t.principal}}">
+<a href="#oferte">{{t.oferte}}</a>
+<a href="#cum-functioneaza">{{t.cum_functioneaza}}</a>
+<a href="#exemple">{{t.exemple}}</a>
+<a href="#intrebari">{{t.intrebari}}</a>
+</nav>
+<div class="s-hd-r">
+<div class="s-lang" role="group" aria-label="{{t.language}}"><button type="button" lang="ro" aria-pressed="{{roPressed}}" onClick="{{ setRo }}">RO</button><button type="button" lang="en" aria-pressed="{{enPressed}}" onClick="{{ setEn }}">EN</button></div>
+<a class="s-btn s-btn-p s-btn-s" href="#cere-un-site">{{t.cere_un_site}}</a>
+<button class="s-burger" type="button" aria-label="{{t.meniu}}" aria-expanded="{{menuExpanded}}" aria-controls="s-menu" onClick="{{ toggleMenu }}"><i></i><i></i></button>
+</div>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{false}}">
+<nav class="s-menu" id="s-menu" aria-label="{{t.meniu_mobil}}">
+<a href="#oferte" onClick="{{ closeMenu }}">{{t.oferte}}</a>
+<a href="#cum-functioneaza" onClick="{{ closeMenu }}">{{t.cum_functioneaza}}</a>
+<a href="#exemple" onClick="{{ closeMenu }}">{{t.exemple}}</a>
+<a href="#intrebari" onClick="{{ closeMenu }}">{{t.intrebari}}</a>
+<a class="s-btn s-btn-p" href="#cere-un-site" onClick="{{ closeMenu }}">{{t.cere_un_site}}</a>
+<div class="s-menu-lang" role="group" aria-label="{{t.language}}"><span aria-hidden="true">{{t.language}}</span><button type="button" lang="ro" aria-pressed="{{roPressed}}" onClick="{{ setRo }}">RO</button><button type="button" lang="en" aria-pressed="{{enPressed}}" onClick="{{ setEn }}">EN</button></div>
+</nav>
+</sc-if>
+</header>
+<main id="continut">
+<section class="s-hero" id="sus" aria-labelledby="s-h1">
+<div class="s-hero-bg" aria-hidden="true"></div>
+<div class="s-wrap s-hero-in">
+<div class="s-hero-tx">
+<p class="s-kick s-rise s-d1">{{t.site_uri_pentru_afaceri}}</p>
+<h1 class="s-h1" id="s-h1"><span class="s-ln">{{t.site_ul_tau}}</span> <span class="s-ln">{{t.intai_il_vezi}}</span> <span class="s-ln">{{t.apoi_decizi}}</span></h1>
+<p class="s-lead s-rise s-d3">{{t.afacerea_ta_merita_sa}}</p>
+<div class="s-cta s-rise s-d4">
+<a class="s-btn s-btn-p" href="#exemple">{{t.descopera_posibilitatile}}<i class="s-sp" aria-hidden="true"></i></a>
+<a class="s-btn s-btn-g" href="#cere-un-site">{{t.cere_un_site}}</a>
+</div>
+<ul class="s-checks s-rise s-d5">
+<li><i class="s-ck" aria-hidden="true"></i>{{t.vezi_inainte_sa_cumperi}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.fara_obligatia_de_a}}</li>
+</ul>
+</div>
+<div class="s-hero-vis" onPointerMove="{{ tilt }}" onPointerLeave="{{ untilt }}">
+<div class="s-stage">
+<i class="s-lamp" aria-hidden="true"></i>
+<div class="s-phone" role="img" aria-label="{{t.previzualizare_a_unui_site}}">
+<i class="s-notch" aria-hidden="true"></i>
+<div class="s-screen" aria-hidden="true">
+<div class="s-site">
+<div class="s-ms s-ms1">
+<div class="s-mtop"><img class="s-mlogo-img" src="/_blob/1d9037ba577aafad0da6609b393ccde2" width="514" height="256" alt=""><span class="s-mtag">DESIGN PREVIEW</span></div>
+<div class="s-mnav"><span>{{t.viziune}}</span><span>DESIGN</span><span>CONTACT</span></div>
+<p class="s-mh">{{t.creat_sa_iesi_in}}</p>
+<p class="s-mp">{{t.o_prezenta_digitala_distincta}}</p>
+<span class="s-mbtn">{{t.vezi_viziunea}}</span>
+<i class="s-orb"></i>
+</div>
+<div class="s-ms s-ms2">
+<p class="s-mst">{{t.un_plus_de_stralucire}}</p>
+<p class="s-mp">{{t.vezi_viziunea_alege_ce}}</p>
+<div class="s-mc"><span class="s-mi"><i class="s-sp"></i></span>{{t.design_adaptat_brandului}}</div>
+<div class="s-mc"><span class="s-mi"><i class="s-sp"></i></span>{{t.gandit_pentru_mobil}}</div>
+<div class="s-mc"><span class="s-mi"><i class="s-sp"></i></span>{{t.contact_la_un_click}}</div>
+</div>
+<div class="s-ms s-ms3">
+<p class="s-mst">{{t.o_prezenta_online_pe}}</p>
+<span class="s-mbtn">{{t.afacerea_ta_intr_o}}</span>
+<p class="s-mfoot">{{t.concept_vizual_ilustrativ_shin}}</p>
+<i class="s-orb"></i>
+</div>
+</div>
+</div>
+<i class="s-sheen" aria-hidden="true"></i>
+</div>
+<p class="s-chip s-chip-a"><i class="s-sp" aria-hidden="true"></i>{{t.design_adaptat_brandului}}</p>
+<p class="s-chip s-chip-b"><i class="s-sp" aria-hidden="true"></i>{{t.gandit_pentru_mobil}}</p>
+<p class="s-chip s-chip-c"><i class="s-sp" aria-hidden="true"></i>{{t.contact_la_un_click}}</p>
+</div>
+</div>
+</div>
+</section>
+<div class="s-mq" aria-hidden="true">
+<div class="s-mq-track">
+<ul class="s-mq-set">
+<li>{{t.vezi_inainte_sa_cumperi}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.fara_obligatia_de_a}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.gandit_pentru_mobil}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.contact_la_un_click}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.design_adaptat_brandului}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+</ul>
+<ul class="s-mq-set">
+<li>{{t.vezi_inainte_sa_cumperi}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.fara_obligatia_de_a}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.gandit_pentru_mobil}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.contact_la_un_click}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+<li>{{t.design_adaptat_brandului}}</li><li class="s-mq-d"><i class="s-sp"></i></li>
+</ul>
+</div>
+</div>
+<section class="s-sec" id="cum-functioneaza" aria-labelledby="s-h-proc">
+<div class="s-wrap s-proc">
+<div class="s-sechd">
+<h2 class="s-h2" id="s-h-proc">{{t.mai_putine_promisiuni_un}}</h2>
+<p class="s-lead">{{t.nu_trebuie_sa_ti}}</p>
+</div>
+<ol class="s-steps">
+<li class="s-step s-rv">
+<span class="s-node" aria-hidden="true">1</span>
+<div class="s-card" onPointerMove="{{ spot }}">
+<div class="s-vz s-vz-1" aria-hidden="true"><i></i><i></i><i></i></div>
+<p class="s-stl">{{t.descoperim}}</p>
+<h3 class="s-h3">{{t.vedem_potentialul_afacerii_tal}}</h3>
+<p class="s-tx">{{t.identificam_afaceri_care_inca}}</p>
+</div>
+</li>
+<li class="s-step s-rv">
+<span class="s-node" aria-hidden="true">2</span>
+<div class="s-card" onPointerMove="{{ spot }}">
+<div class="s-vz s-vz-2" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<p class="s-stl">{{t.cream}}</p>
+<h3 class="s-h3">{{t.iti_aratam_o_prima}}</h3>
+<p class="s-tx">{{t.pregatim_un_site_demonstrativ}}</p>
+</div>
+</li>
+<li class="s-step s-rv">
+<span class="s-node" aria-hidden="true">3</span>
+<div class="s-card" onPointerMove="{{ spot }}">
+<div class="s-vz s-vz-3" aria-hidden="true"></div>
+<p class="s-stl">{{t.tu_decizi}}</p>
+<h3 class="s-h3">{{t.iti_place_il_facem}}</h3>
+<p class="s-tx">{{t.discutam_modificarile_pretul_s}}</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="s-sec" id="exemple" aria-labelledby="s-h-ex">
+<div class="s-wrap">
+<div class="s-sechd">
+<h2 class="s-h2" id="s-h-ex">{{t.afaceri_diferite_aceeasi_atent}}</h2>
+<p class="s-lead">{{t.de_la_un_atelier}}</p>
+</div>
+<div class="s-ex-stage" onPointerMove="{{ tilt }}" onPointerLeave="{{ untilt }}">
+<i class="s-ex-glow" aria-hidden="true"></i>
+<div class="s-bw" aria-hidden="true">
+<div class="s-bw-bar"><i></i><i></i><i></i><span>{{t.concept_demonstrativ}}</span></div>
+<div class="s-na">
+<div class="s-na-top"><span class="s-na-logo">NORD<b>AUTO</b></span><span class="s-na-nav"><span>{{t.servicii}}</span><span>{{t.atelier}}</span><span>Contact</span></span></div>
+<div class="s-na-hero">
+<div>
+<p class="s-na-h">{{t.grija_pentru_fiecare_kilometru}}</p>
+<p class="s-na-p">{{t.un_service_prezentat_clar}}</p>
+<span class="s-na-b">{{t.programeaza_te}}</span>
+<div class="s-na-svc"><span>{{t.revizie}}</span><span>{{t.diagnoza}}</span><span>{{t.frane}}</span><span>{{t.anvelope}}</span></div>
+</div>
+<div class="s-dial"><i class="s-dial-t"></i><i class="s-dial-c"></i><i class="s-dial-r"></i><i class="s-dial-n"></i><i class="s-dial-h"></i><span class="s-dial-k">KM</span></div>
+</div>
+</div>
+</div>
+<div class="s-ex-ph">
+<div class="s-phone" role="img" aria-label="{{t.conceptul_nord_auto_pe}}">
+<i class="s-notch" aria-hidden="true"></i>
+<div class="s-screen" aria-hidden="true">
+<div class="s-na s-na-m">
+<div class="s-na-top"><span class="s-na-logo">NORD<b>AUTO</b></span><span class="s-burg2"><i></i><i></i></span></div>
+<p class="s-na-h">{{t.grija_pentru_fiecare_kilometru}}</p>
+<p class="s-na-p">{{t.un_service_prezentat_clar}}</p>
+<span class="s-na-b">{{t.programeaza_te}}</span>
+<div class="s-dial"><i class="s-dial-t"></i><i class="s-dial-c"></i><i class="s-dial-r"></i><i class="s-dial-n"></i><i class="s-dial-h"></i><span class="s-dial-k">KM</span></div>
+</div>
+</div>
+<i class="s-sheen" aria-hidden="true"></i>
+</div>
+</div>
+</div>
+<div class="s-cap">
+<div class="s-cap-t"><b>Nord Auto</b><span>{{t.service_auto_concept_demonstra}}</span></div>
+<a class="s-btn s-btn-g" href="#cere-un-site">{{t.vreau_sa_discutam_despre}}</a>
+</div>
+<p class="s-note">{{t.exemplele_sunt_concepte_vizual}}</p>
+</div>
+</section>
+<section class="s-sec s-ben" aria-labelledby="s-h-ben">
+<div class="s-wrap">
+<div class="s-ben-top">
+<div class="s-sechd">
+<h2 class="s-h2" id="s-h-ben">{{t.un_site_frumos_si}}</h2>
+<p class="s-lead">{{t.un_loc_in_care}}</p>
+</div>
+<a class="s-btn s-btn-p" href="#cere-un-site">{{t.sa_vorbim_despre_afacerea}}<i class="s-sp" aria-hidden="true"></i></a>
+</div>
+<div class="s-bento">
+<article class="s-card s-tile s-b1" onPointerMove="{{ spot }}">
+<div class="s-v1" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="s-sp"></span></div>
+<div>
+<h3 class="s-h3">{{t.o_prima_impresie_pe}}</h3>
+<p class="s-tx">{{t.o_directie_vizuala_coerenta}}</p>
+</div>
+</article>
+<article class="s-card s-tile s-b2" onPointerMove="{{ spot }}">
+<div class="s-v2" aria-hidden="true"><i></i><i></i></div>
+<div>
+<h3 class="s-h3">{{t.la_fel_de_firesc}}</h3>
+<p class="s-tx">{{t.o_prezentare_care_se}}</p>
+</div>
+</article>
+<article class="s-card s-tile s-b3" onPointerMove="{{ spot }}">
+<div class="s-v3" aria-hidden="true"><i class="l"></i><b></b><b></b><b></b></div>
+<div>
+<h3 class="s-h3">{{t.un_drum_scurt_pana}}</h3>
+<p class="s-tx">{{t.informatiile_importante_si_opt}}</p>
+</div>
+</article>
+<article class="s-card s-tile s-b4" onPointerMove="{{ spot }}">
+<svg class="s-v4" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true" focusable="false"><circle class="r0" cx="60" cy="60" r="50"></circle><circle class="r1" cx="60" cy="60" r="50"></circle><path class="ck" d="M38 62l16 16 30-34"></path></svg>
+<div>
+<h3 class="s-h3">{{t.o_decizie_informata}}</h3>
+<p class="s-tx">{{t.vezi_propunerea_si_afli}}</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="s-sec" id="oferte" aria-labelledby="s-h-pr">
+<div class="s-wrap">
+<div class="s-sechd">
+<h2 class="s-h2" id="s-h-pr">{{t.trei_oferte_urmatorul_tau}}</h2>
+<p class="s-lead">{{t.descopera_ce_include_fiecare}}</p>
+</div>
+<div class="s-price-g">
+<article class="s-card s-plan" onPointerMove="{{ spot }}">
+<div class="s-plan-hd">
+<div><h3 class="s-h3">Essential</h3><p class="s-plan-tag">{{t.afacerea_ta_online}}</p></div>
+<div class="s-lad" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+</div>
+<p class="s-pr"><span class="s-pc {{price.pcOff}}">{{price.cur}}</span><span class="s-pn">{{price.e}}</span><span class="s-pu">{{price.unit}}</span></p>
+<ul class="s-ft">
+<li><i class="s-ck" aria-hidden="true"></i>{{t.site_web}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.sectiune_de_servicii}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.pagina_de_contact_cu}}</li>
+</ul>
+<a class="s-btn s-btn-g" href="#cere-un-site" data-pkg="essential" onClick="{{ pick }}">{{t.comanda_essential}}</a>
+</article>
+<article class="s-card s-plan s-plan-m" onPointerMove="{{ spot }}">
+<div class="s-plan-hd">
+<div><h3 class="s-h3">Signature</h3><p class="s-plan-tag">{{t.un_site_cu_propria}}</p></div>
+<div class="s-lad" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></div>
+</div>
+<p class="s-pr"><span class="s-pc {{price.pcOff}}">{{price.cur}}</span><span class="s-pn">{{price.s}}</span><span class="s-pu">{{price.unit}}</span></p>
+<ul class="s-ft">
+<li class="s-ft-inh"><i class="s-sp" aria-hidden="true"></i>{{t.tot_ce_include_essential}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>Logo</li>
+</ul>
+<a class="s-btn s-btn-p" href="#cere-un-site" data-pkg="signature" onClick="{{ pick }}">{{t.comanda_signature}}</a>
+</article>
+<article class="s-card s-plan" onPointerMove="{{ spot }}">
+<div class="s-plan-hd">
+<div><h3 class="s-h3">Visibility</h3><p class="s-plan-tag">{{t.mai_mult_spatiu_pentru}}</p></div>
+<div class="s-lad" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+</div>
+<p class="s-pr"><span class="s-pc {{price.pcOff}}">{{price.cur}}</span><span class="s-pn">{{price.v}}</span><span class="s-pu">{{price.unit}}</span></p>
+<ul class="s-ft">
+<li class="s-ft-inh"><i class="s-sp" aria-hidden="true"></i>{{t.tot_ce_include_signature}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.motion_graphics}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.pagini_individuale_pentru_serv}}</li>
+<li><i class="s-ck" aria-hidden="true"></i>{{t.configurare_seo_prima_luna}}</li>
+</ul>
+<p class="s-ft-n">{{t.continuarea_serviciului_seo_du}}</p>
+<a class="s-btn s-btn-g" href="#cere-un-site" data-pkg="visibility" onClick="{{ pick }}">{{t.comanda_visibility}}</a>
+</article>
+</div>
+<p class="s-note">{{t.price_note}}</p>
+</div>
+</section>
+<section class="s-sec s-ben" id="intrebari" aria-labelledby="s-h-faq">
+<div class="s-wrap s-faq">
+<div class="s-sechd">
+<h2 class="s-h2" id="s-h-faq">{{t.intrebari_firesti_raspunsuri_c}}</h2>
+<a class="s-btn s-btn-g" href="#cere-un-site">{{t.cere_un_site}}</a>
+</div>
+<div class="s-qs">
+<details class="s-q"><summary>{{t.sunt_obligat_sa_cumpar}}<span class="s-q-i" aria-hidden="true"></span></summary><div class="s-q-a"><p>{{t.nu_previzualizarea_iti_permite}}</p></div></details>
+<details class="s-q"><summary>{{t.cat_costa_un_site}}<span class="s-q-i" aria-hidden="true"></span></summary><div class="s-q-a"><p>{{t.faq_price_a}}</p></div></details>
+<details class="s-q"><summary>{{t.pot_cere_modificari}}<span class="s-q-i" aria-hidden="true"></span></summary><div class="s-q-a"><p>{{t.da_discutam_ce_ai}}</p></div></details>
+<details class="s-q"><summary>{{t.ce_se_intampla_cu}}<span class="s-q-i" aria-hidden="true"></span></summary><div class="s-q-a"><p>{{t.stabilim_in_oferta_cum}}</p></div></details>
+<details class="s-q"><summary>{{t.pot_sa_va_contactez}}<span class="s-q-i" aria-hidden="true"></span></summary><div class="s-q-a"><p>{{t.sigur_scrie_ne_despre}}</p></div></details>
+</div>
+</div>
+</section>
+<section class="s-sec" id="cere-un-site" aria-labelledby="s-h-form">
+<div class="s-wrap s-form-in">
+<div class="s-form-l">
+<p class="s-kick">{{t.un_site_pentru_compania}}</p>
+<h2 class="s-h2" id="s-h-form">{{t.afacerea_ta_urmatorul_capitol}}</h2>
+<p class="s-lead">{{t.nu_trebuie_sa_astepti}}</p>
+<ul class="s-notes">
+<li><i class="s-sp" aria-hidden="true"></i>{{t.analizam_cererea_si_discutam}}</li>
+<li><i class="s-sp" aria-hidden="true"></i>{{t.ai_deja_o_idee}}</li>
+</ul>
+<div class="s-contact">
+<p class="s-mail">{{t.preferi_sa_ne_scrii}} <a href="mailto:contact@shinedigital.ro">contact@shinedigital.ro</a></p>
+<p class="s-mail s-mail-wa"><svg class="s-wa-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg><span>{{t.sau_pe_whatsapp}} <a href="{{waHref}}" target="_blank" rel="noopener noreferrer">{{waShown}}</a></span></p>
+</div>
+</div>
+<form class="s-fm" onSubmit="{{ submit }}" aria-label="{{t.cerere_de_site}}">
+<div class="s-fgrid">
+<label class="s-f"><span>{{t.pachet_ales}}</span><span class="s-sel"><select class="s-in" id="f-pkg" name="pachet"><option value="none">{{t.pkg_none}}</option><option value="essential">{{t.pkg_essential}}</option><option value="signature">{{t.pkg_signature}}</option><option value="visibility">{{t.pkg_visibility}}</option></select></span></label>
+<label class="s-f"><span>{{t.numele_companiei}} <em>*</em></span><input class="s-in" type="text" name="companie" autocomplete="organization" required></label>
+<label class="s-f"><span>{{t.domeniul_de_activitate}} <em>*</em></span><input class="s-in" type="text" name="domeniu" autocomplete="off" placeholder="{{t.ex_service_auto_curatenie}}" required></label>
+<label class="s-f"><span>{{t.localitatea}} <em>*</em></span><input class="s-in" type="text" name="localitate" autocomplete="address-level2" placeholder="{{t.ex_bucuresti}}" required></label>
+<label class="s-f"><span>{{t.persoana_de_contact}} <em>*</em></span><input class="s-in" type="text" name="persoana" autocomplete="name" required></label>
+<label class="s-f"><span>{{t.adresa_de_e_mail}} <em>*</em></span><input class="s-in" type="email" name="email" autocomplete="email" inputmode="email" spellcheck="false" required></label>
+<label class="s-f"><span>{{t.telefon_optional}}</span><input class="s-in" type="tel" name="telefon" autocomplete="tel" inputmode="tel"></label>
+<label class="s-f"><span>{{t.buget_orientativ_optional}}</span><span class="s-sel"><select class="s-in" name="buget"><option value="none">{{t.bud_none}}</option><option value="b1">{{t.bud_1}}</option><option value="b2">{{t.bud_2}}</option><option value="b3">{{t.bud_3}}</option><option value="b4">{{t.bud_4}}</option></select></span></label>
+<label class="s-f s-f-w"><span>{{t.ce_iti_doresti_de}} <em>*</em></span><textarea class="s-in" name="mesaj" rows="4" placeholder="{{t.spune_ne_pe_scurt}}" required></textarea></label>
+</div>
+<p class="s-fine">{{t.campuri_obligatorii_datele_com}}</p>
+<button class="s-btn s-btn-p" type="submit">{{t.pregateste_cererea_prin_e}}<i class="s-sp" aria-hidden="true"></i></button>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div class="s-ok" id="s-ok" role="status">
+<p class="s-ok-t">{{t.cererea_ta_e_pregatita}}</p>
+<p class="s-fine">{{t.trimite_o_din_aplicatia}} <strong>contact@shinedigital.ro</strong>.</p>
+<pre class="s-ok-pre">{{msg}}</pre>
+<div class="s-ok-b">
+<a class="s-btn s-btn-p" href="{{mailto}}">{{t.deschide_e_mailul}}</a>
+<button class="s-btn s-btn-g" type="button" onClick="{{ copyMsg }}">{{copyLabel}}</button>
+</div>
+</div>
+</sc-if>
+</form>
+</div>
+</section>
+<section class="s-end" id="s-final" aria-labelledby="s-h-end" onPointerMove="{{ spot }}">
+<div class="s-wrap s-end-in">
+<p class="s-kick">{{t.urmatorul_pas_incepe_cu}}</p>
+<h2 class="s-h2" id="s-h-end">{{t.hai_sa_ti_punem}}</h2>
+<p class="s-lead">{{t.spune_ne_cu_ce}}</p>
+<div class="s-end-b">
+<a class="s-btn s-btn-p" href="#cere-un-site">{{t.completeaza_cererea_de_site}}<i class="s-sp" aria-hidden="true"></i></a>
+<a class="s-btn s-btn-g" href="{{waHref}}" target="_blank" rel="noopener noreferrer"><svg class="s-wa-svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>{{t.scrie_ne_pe_whatsapp}}</a>
+<a class="s-end-mail" href="mailto:contact@shinedigital.ro">contact@shinedigital.ro</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="s-foot">
+<div class="s-wrap s-foot-in">
+<a class="s-logo" href="#sus" aria-label="{{t.shine_digital_la_inceput}}" translate="no"><img class="s-lg" src="/_blob/1d9037ba577aafad0da6609b393ccde2" width="514" height="256" alt="Shine Digital"></a>
+<p>{{t.copyright}}</p>
+<div class="s-lang s-lang-f" role="group" aria-label="{{t.language}}"><button type="button" lang="ro" aria-pressed="{{roPressed}}" onClick="{{ setRo }}">RO</button><button type="button" lang="en" aria-pressed="{{enPressed}}" onClick="{{ setEn }}">EN</button></div>
+<a class="s-top" href="#cum-functioneaza">{{t.inapoi_la_poveste}}</a>
+</div>
+</footer>
+<a class="s-wa {{waClass}}" href="{{waHref}}" target="_blank" rel="noopener noreferrer" aria-label="{{t.scrie_ne_pe_whatsapp}}">
+<span class="s-wa-b"><svg class="s-wa-svg" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></span>
+<span class="s-wa-t"><span class="s-wa-x">{{t.scrie_ne_pe}} </span>WhatsApp</span>
+</a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":8000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false, sent: false, msg: '', mailto: '', copied: '', waHidden: false, lang: 'ro' };
+  }
+  dict() {
+    if (this._dict) return this._dict;
+    // PRICES: change the numbers here and nowhere else.
+    var RON = { e: 949, s: 1189, v: 1669 };
+    var USD = { e: 199, s: 249, v: 350 };
+    var grp = function (n, sep) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep); };
+    var ron = function (n) { return grp(n, '.'); };
+    var usd = function (n) { return grp(n, ','); };
+    var ro = {
+      "sari_la_continut": "Sari la conținut",
+      "shine_digital_la_inceput": "Shine Digital, la început",
+      "principal": "Principal",
+      "oferte": "Oferte",
+      "cum_functioneaza": "Cum funcționează",
+      "exemple": "Exemple",
+      "intrebari": "Întrebări",
+      "cere_un_site": "Cere un site",
+      "meniu": "Meniu",
+      "meniu_mobil": "Meniu mobil",
+      "site_uri_pentru_afaceri": "Site-uri pentru afaceri reale",
+      "site_ul_tau": "Site-ul tău.",
+      "intai_il_vezi": "Întâi îl vezi.",
+      "apoi_decizi": "Apoi decizi.",
+      "afacerea_ta_merita_sa": "Afacerea ta merită să fie văzută. Îți pregătim o propunere de site, ți-o arătăm și tu alegi dacă este potrivită pentru tine.",
+      "descopera_posibilitatile": "Descoperă posibilitățile",
+      "vezi_inainte_sa_cumperi": "Vezi înainte să cumperi",
+      "fara_obligatia_de_a": "Fără obligația de a accepta",
+      "previzualizare_a_unui_site": "Previzualizare a unui site Shine Digital, pe telefon",
+      "viziune": "VIZIUNE",
+      "creat_sa_iesi_in": "Creat să ieși în evidență.",
+      "o_prezenta_digitala_distincta": "O prezență digitală distinctă. Creată în jurul afacerii tale.",
+      "vezi_viziunea": "Vezi viziunea",
+      "un_plus_de_stralucire": "Un plus de strălucire.",
+      "vezi_viziunea_alege_ce": "Vezi viziunea. Alege ce te reprezintă.",
+      "design_adaptat_brandului": "Design adaptat brandului",
+      "gandit_pentru_mobil": "Gândit pentru mobil",
+      "contact_la_un_click": "Contact la un click distanță",
+      "o_prezenta_online_pe": "O prezență online pe măsura afacerii tale.",
+      "afacerea_ta_intr_o": "Afacerea ta, într-o lumină nouă.",
+      "concept_vizual_ilustrativ_shin": "Concept vizual ilustrativ · Shine Digital",
+      "mai_putine_promisiuni_un": "Mai puține promisiuni. Un site pe care îl poți vedea.",
+      "nu_trebuie_sa_ti": "Nu trebuie să-ți imaginezi cum ar putea arăta. Plecăm de la o propunere concretă, construită în jurul afacerii tale.",
+      "descoperim": "Descoperim",
+      "vedem_potentialul_afacerii_tal": "Vedem potențialul afacerii tale.",
+      "identificam_afaceri_care_inca": "Identificăm afaceri care încă nu au un site și conturăm o prezență online potrivită activității lor. Ne poți scrie și tu direct.",
+      "cream": "Creăm",
+      "iti_aratam_o_prima": "Îți arătăm o primă variantă.",
+      "pregatim_un_site_demonstrativ": "Pregătim un site demonstrativ și îți trimitem o previzualizare. Îl explorezi în ritmul tău și ne spui ce părere ai.",
+      "tu_decizi": "Tu decizi",
+      "iti_place_il_facem": "Îți place? Îl facem al tău.",
+      "discutam_modificarile_pretul_s": "Discutăm modificările, prețul și ce include predarea. Continuăm doar dacă accepți oferta și condițiile stabilite împreună.",
+      "afaceri_diferite_aceeasi_atent": "Afaceri diferite. Aceeași atenție la detalii.",
+      "de_la_un_atelier": "De la un atelier local la o echipă de specialiști, fiecare afacere are o poveste care merită un loc online.",
+      "concept_demonstrativ": "Concept demonstrativ",
+      "servicii": "Servicii",
+      "atelier": "Atelier",
+      "grija_pentru_fiecare_kilometru": "Grijă pentru fiecare kilometru.",
+      "un_service_prezentat_clar": "Un service prezentat clar. O programare mai ușor de făcut.",
+      "programeaza_te": "Programează-te",
+      "revizie": "Revizie",
+      "diagnoza": "Diagnoză",
+      "frane": "Frâne",
+      "anvelope": "Anvelope",
+      "conceptul_nord_auto_pe": "Conceptul Nord Auto pe telefon: Grijă pentru fiecare kilometru.",
+      "service_auto_concept_demonstra": "Service auto · Concept demonstrativ",
+      "vreau_sa_discutam_despre": "Vreau să discutăm despre un site",
+      "exemplele_sunt_concepte_vizual": "Exemplele sunt concepte vizuale pentru afaceri fictive, nu proiecte realizate pentru clienți.",
+      "un_site_frumos_si": "Un site frumos. Și, mai ales, util.",
+      "un_loc_in_care": "Un loc în care oamenii înțeleg ce faci, descoperă ce te diferențiază și găsesc ușor o cale să te contacteze.",
+      "sa_vorbim_despre_afacerea": "Să vorbim despre afacerea ta",
+      "o_prima_impresie_pe": "O primă impresie pe măsură",
+      "o_directie_vizuala_coerenta": "O direcție vizuală coerentă, cu texte clare și servicii ușor de înțeles.",
+      "la_fel_de_firesc": "La fel de firesc pe telefon",
+      "o_prezentare_care_se": "O prezentare care se adaptează ecranului, de la mobil la desktop.",
+      "un_drum_scurt_pana": "Un drum scurt până la contact",
+      "informatiile_importante_si_opt": "Informațiile importante și opțiunile de contact sunt la îndemâna vizitatorilor.",
+      "o_decizie_informata": "O decizie informată",
+      "vezi_propunerea_si_afli": "Vezi propunerea și afli costurile înainte să hotărăști dacă mergem mai departe.",
+      "trei_oferte_urmatorul_tau": "Trei oferte. Următorul tău pas.",
+      "descopera_ce_include_fiecare": "Descoperă ce include fiecare pachet, apoi povestește-ne despre afacerea ta.",
+      "afacerea_ta_online": "Afacerea ta, online.",
+      "site_web": "Site web",
+      "sectiune_de_servicii": "Secțiune de servicii",
+      "pagina_de_contact_cu": "Pagină de contact cu formular",
+      "comanda_essential": "Comandă Essential",
+      "un_site_cu_propria": "Un site cu propria identitate.",
+      "tot_ce_include_essential": "Tot ce include Essential, plus:",
+      "comanda_signature": "Comandă Signature",
+      "mai_mult_spatiu_pentru": "Mai mult spațiu pentru fiecare serviciu.",
+      "tot_ce_include_signature": "Tot ce include Signature, plus:",
+      "pagini_individuale_pentru_serv": "Pagini individuale pentru servicii, optimizate SEO",
+      "configurare_seo_prima_luna": "Configurare SEO + prima lună gratuită",
+      "continuarea_serviciului_seo_du": "Continuarea serviciului SEO după prima lună gratuită se stabilește separat.",
+      "comanda_visibility": "Comandă Visibility",
+      "price_note": "Prețuri în RON. Butonul de comandă pregătește o solicitare; nu se face o plată online. Confirmăm detaliile proiectului, domeniul, găzduirea și eventualele costuri suplimentare înainte de acceptare.",
+      "intrebari_firesti_raspunsuri_c": "Întrebări firești. Răspunsuri clare.",
+      "sunt_obligat_sa_cumpar": "Sunt obligat să cumpăr site-ul demonstrativ?",
+      "nu_previzualizarea_iti_permite": "Nu. Previzualizarea îți permite să evaluezi propunerea. Dacă nu este potrivită pentru afacerea ta, poți refuza.",
+      "cat_costa_un_site": "Cât costă un site?",
+      "pot_cere_modificari": "Pot cere modificări?",
+      "da_discutam_ce_ai": "Da. Discutăm ce ai vrea să ajustăm și stabilim împreună modificările incluse în ofertă înainte de finalizare.",
+      "ce_se_intampla_cu": "Ce se întâmplă cu domeniul și găzduirea?",
+      "stabilim_in_oferta_cum": "Stabilim în ofertă cum va fi publicat site-ul, cine administrează domeniul și găzduirea, ce acces primești și ce costuri presupune întreținerea.",
+      "pot_sa_va_contactez": "Pot să vă contactez dacă nu am primit o propunere?",
+      "sigur_scrie_ne_despre": "Sigur. Scrie-ne despre afacerea ta, serviciile pe care le oferi și ce îți dorești de la un site. Discutăm de acolo.",
+      "un_site_pentru_compania": "Un site pentru compania ta",
+      "afacerea_ta_urmatorul_capitol": "Afacerea ta. Următorul capitol, online.",
+      "nu_trebuie_sa_astepti": "Nu trebuie să aștepți să te descoperim noi. Spune-ne câteva lucruri despre compania ta și despre site-ul pe care ți-l dorești.",
+      "analizam_cererea_si_discutam": "Analizăm cererea și discutăm despre o propunere potrivită. Completarea formularului nu te obligă să cumperi.",
+      "ai_deja_o_idee": "Ai deja o idee sau doar un punct de plecare? Ambele sunt binevenite.",
+      "preferi_sa_ne_scrii": "Preferi să ne scrii direct?",
+      "sau_pe_whatsapp": "Sau pe WhatsApp:",
+      "cerere_de_site": "Cerere de site",
+      "pachet_ales": "Pachet ales",
+      "numele_companiei": "Numele companiei",
+      "domeniul_de_activitate": "Domeniul de activitate",
+      "ex_service_auto_curatenie": "ex. service auto, curățenie, instalații",
+      "localitatea": "Localitatea",
+      "ex_bucuresti": "ex. București",
+      "persoana_de_contact": "Persoana de contact",
+      "adresa_de_e_mail": "Adresa de e-mail",
+      "telefon_optional": "Telefon (opțional)",
+      "buget_orientativ_optional": "Buget orientativ (opțional)",
+      "ce_iti_doresti_de": "Ce îți dorești de la site?",
+      "spune_ne_pe_scurt": "Spune-ne pe scurt cu ce te ocupi și ce ți-ai dori să vezi pe site…",
+      "campuri_obligatorii_datele_com": "* Câmpuri obligatorii. Datele completate sunt folosite pentru pregătirea cererii și nu sunt salvate pe acest site. Butonul deschide aplicația ta de e-mail cu mesajul completat. Apasă „Trimite” acolo pentru ca solicitarea să ajungă la Shine Digital.",
+      "pregateste_cererea_prin_e": "Pregătește cererea prin e-mail",
+      "cererea_ta_e_pregatita": "Cererea ta e pregătită.",
+      "trimite_o_din_aplicatia": "Trimite-o din aplicația ta de e-mail. Dacă nu s-a deschis, copiază mesajul și scrie-ne la",
+      "deschide_e_mailul": "Deschide e-mailul",
+      "urmatorul_pas_incepe_cu": "Următorul pas începe cu o conversație",
+      "hai_sa_ti_punem": "Hai să-ți punem afacerea în lumină.",
+      "spune_ne_cu_ce": "Spune-ne cu ce te ocupi și unde vrei să ajungi. Împreună putem contura o prezență online care să te reprezinte.",
+      "completeaza_cererea_de_site": "Completează cererea de site",
+      "scrie_ne_pe_whatsapp": "Scrie-ne pe WhatsApp",
+      "copyright": "© 2026 Shine Digital. O idee bună merită să fie văzută.",
+      "inapoi_la_poveste": "Înapoi la poveste ↑",
+      "scrie_ne_pe": "Scrie-ne pe",
+      "language": "Limba",
+      "pkg_none": "Nu am ales încă",
+      "bud_none": "Nu este stabilit încă",
+      "bud_1": "Sub 2.500 RON",
+      "bud_2": "2.500–5.000 RON",
+      "bud_3": "5.000–10.000 RON",
+      "bud_4": "Peste 10.000 RON",
+      "m_to": "Către",
+      "m_subject": "Subiect",
+      "m_subject_pre": "Cerere de site",
+      "m_pkg": "Pachet ales",
+      "m_company": "Numele companiei",
+      "m_field": "Domeniul de activitate",
+      "m_city": "Localitatea",
+      "m_contact": "Persoana de contact",
+      "m_email": "Adresa de e-mail",
+      "m_phone": "Telefon",
+      "m_budget": "Buget orientativ",
+      "m_want": "Ce îmi doresc de la site",
+      "copy_ok": "Copiat",
+      "copy_sel": "Text selectat",
+      "copy_default": "Copiază mesajul",
+      "wa_text": "Bună! Am văzut Shine Digital și aș dori un site pentru afacerea mea.",
+      "motion_graphics": "Motion graphics și animații pentru site",
+    };
+    var en = {
+      "sari_la_continut": "Skip to content",
+      "shine_digital_la_inceput": "Shine Digital, back to top",
+      "principal": "Main",
+      "oferte": "Packages",
+      "cum_functioneaza": "How it works",
+      "exemple": "Examples",
+      "intrebari": "FAQ",
+      "cere_un_site": "Request a site",
+      "meniu": "Menu",
+      "meniu_mobil": "Mobile menu",
+      "site_uri_pentru_afaceri": "Websites for real businesses",
+      "site_ul_tau": "Your website.",
+      "intai_il_vezi": "See it first.",
+      "apoi_decizi": "Then decide.",
+      "afacerea_ta_merita_sa": "Your business deserves to be seen. We prepare a website proposal, show it to you, and you decide if it’s right for you.",
+      "descopera_posibilitatile": "Explore the possibilities",
+      "vezi_inainte_sa_cumperi": "See it before you buy",
+      "fara_obligatia_de_a": "No obligation to accept",
+      "previzualizare_a_unui_site": "Preview of a Shine Digital website, on a phone",
+      "viziune": "VISION",
+      "creat_sa_iesi_in": "Built to stand out.",
+      "o_prezenta_digitala_distincta": "A distinct digital presence. Built around your business.",
+      "vezi_viziunea": "See the vision",
+      "un_plus_de_stralucire": "A little extra shine.",
+      "vezi_viziunea_alege_ce": "See the vision. Choose what represents you.",
+      "design_adaptat_brandului": "Design that fits your brand",
+      "gandit_pentru_mobil": "Designed for mobile",
+      "contact_la_un_click": "Contact one click away",
+      "o_prezenta_online_pe": "An online presence worthy of your business.",
+      "afacerea_ta_intr_o": "Your business, in a new light.",
+      "concept_vizual_ilustrativ_shin": "Illustrative visual concept · Shine Digital",
+      "mai_putine_promisiuni_un": "Fewer promises. A website you can actually see.",
+      "nu_trebuie_sa_ti": "You don’t have to imagine how it could look. We start from a concrete proposal, built around your business.",
+      "descoperim": "Discover",
+      "vedem_potentialul_afacerii_tal": "We see the potential in your business.",
+      "identificam_afaceri_care_inca": "We find businesses that don’t have a website yet and shape an online presence that fits what they do. You can also write to us directly.",
+      "cream": "Create",
+      "iti_aratam_o_prima": "We show you a first version.",
+      "pregatim_un_site_demonstrativ": "We prepare a demo website and send you a preview. You explore it at your own pace and tell us what you think.",
+      "tu_decizi": "You decide",
+      "iti_place_il_facem": "Like it? We make it yours.",
+      "discutam_modificarile_pretul_s": "We discuss changes, price and what the handover includes. We continue only if you accept the offer and the terms we set together.",
+      "afaceri_diferite_aceeasi_atent": "Different businesses. The same attention to detail.",
+      "de_la_un_atelier": "From a local workshop to a team of specialists, every business has a story that deserves a place online.",
+      "concept_demonstrativ": "Demo concept",
+      "servicii": "Services",
+      "atelier": "Workshop",
+      "grija_pentru_fiecare_kilometru": "Care for every kilometer.",
+      "un_service_prezentat_clar": "An auto shop, presented clearly. Booking made easier.",
+      "programeaza_te": "Book a visit",
+      "revizie": "Maintenance",
+      "diagnoza": "Diagnostics",
+      "frane": "Brakes",
+      "anvelope": "Tires",
+      "conceptul_nord_auto_pe": "Nord Auto concept on a phone: Care for every kilometer.",
+      "service_auto_concept_demonstra": "Auto service · Demo concept",
+      "vreau_sa_discutam_despre": "I’d like to talk about a website",
+      "exemplele_sunt_concepte_vizual": "The examples are visual concepts for fictional businesses, not projects built for clients.",
+      "un_site_frumos_si": "A beautiful website. And, above all, a useful one.",
+      "un_loc_in_care": "A place where people understand what you do, discover what sets you apart and easily find a way to contact you.",
+      "sa_vorbim_despre_afacerea": "Let’s talk about your business",
+      "o_prima_impresie_pe": "A first impression to match",
+      "o_directie_vizuala_coerenta": "A coherent visual direction, with clear text and services that are easy to understand.",
+      "la_fel_de_firesc": "Just as natural on a phone",
+      "o_prezentare_care_se": "A presentation that adapts to the screen, from mobile to desktop.",
+      "un_drum_scurt_pana": "A short path to contact",
+      "informatiile_importante_si_opt": "Key information and contact options are within easy reach of your visitors.",
+      "o_decizie_informata": "An informed decision",
+      "vezi_propunerea_si_afli": "You see the proposal and learn the costs before deciding whether we go further.",
+      "trei_oferte_urmatorul_tau": "Three packages. Your next step.",
+      "descopera_ce_include_fiecare": "See what each package includes, then tell us about your business.",
+      "afacerea_ta_online": "Your business, online.",
+      "site_web": "Website",
+      "sectiune_de_servicii": "Services section",
+      "pagina_de_contact_cu": "Contact page with a form",
+      "comanda_essential": "Order Essential",
+      "un_site_cu_propria": "A website with its own identity.",
+      "tot_ce_include_essential": "Everything in Essential, plus:",
+      "comanda_signature": "Order Signature",
+      "mai_mult_spatiu_pentru": "More room for every service.",
+      "tot_ce_include_signature": "Everything in Signature, plus:",
+      "pagini_individuale_pentru_serv": "Individual service pages, SEO-optimized",
+      "configurare_seo_prima_luna": "SEO setup + first month free",
+      "continuarea_serviciului_seo_du": "Continuing the SEO service after the free first month is agreed separately.",
+      "comanda_visibility": "Order Visibility",
+      "price_note": "Prices in USD. The order button prepares a request; no online payment is made. We confirm project details, domain, hosting and any extra costs before acceptance.",
+      "intrebari_firesti_raspunsuri_c": "Fair questions. Clear answers.",
+      "sunt_obligat_sa_cumpar": "Do I have to buy the demo website?",
+      "nu_previzualizarea_iti_permite": "No. The preview lets you evaluate the proposal. If it isn’t right for your business, you can decline.",
+      "cat_costa_un_site": "How much does a website cost?",
+      "pot_cere_modificari": "Can I ask for changes?",
+      "da_discutam_ce_ai": "Yes. We discuss what you’d like to adjust and agree together on the changes included in the offer before it’s finalized.",
+      "ce_se_intampla_cu": "What about the domain and hosting?",
+      "stabilim_in_oferta_cum": "We set out in the offer how the website will be published, who manages the domain and hosting, what access you get and what upkeep costs.",
+      "pot_sa_va_contactez": "Can I contact you if I haven’t received a proposal?",
+      "sigur_scrie_ne_despre": "Of course. Tell us about your business, the services you offer and what you want from a website. We take it from there.",
+      "un_site_pentru_compania": "A website for your company",
+      "afacerea_ta_urmatorul_capitol": "Your business. The next chapter, online.",
+      "nu_trebuie_sa_astepti": "You don’t have to wait for us to find you. Tell us a few things about your company and the website you want.",
+      "analizam_cererea_si_discutam": "We review your request and discuss a suitable proposal. Filling in the form doesn’t oblige you to buy.",
+      "ai_deja_o_idee": "Already have an idea, or just a starting point? Both are welcome.",
+      "preferi_sa_ne_scrii": "Prefer to write to us directly?",
+      "sau_pe_whatsapp": "Or on WhatsApp:",
+      "cerere_de_site": "Website request",
+      "pachet_ales": "Chosen package",
+      "numele_companiei": "Company name",
+      "domeniul_de_activitate": "Line of business",
+      "ex_service_auto_curatenie": "e.g. auto repair, cleaning, plumbing",
+      "localitatea": "City",
+      "ex_bucuresti": "e.g. Bucharest",
+      "persoana_de_contact": "Contact person",
+      "adresa_de_e_mail": "Email address",
+      "telefon_optional": "Phone (optional)",
+      "buget_orientativ_optional": "Estimated budget (optional)",
+      "ce_iti_doresti_de": "What do you want from the website?",
+      "spune_ne_pe_scurt": "Briefly tell us what you do and what you’d like to see on the website…",
+      "campuri_obligatorii_datele_com": "* Required fields. The data you enter is used to prepare the request and is not saved on this site. The button opens your email app with the message filled in. Press “Send” there so the request reaches Shine Digital.",
+      "pregateste_cererea_prin_e": "Prepare the request by email",
+      "cererea_ta_e_pregatita": "Your request is ready.",
+      "trimite_o_din_aplicatia": "Send it from your email app. If it didn’t open, copy the message and write to us at",
+      "deschide_e_mailul": "Open email",
+      "urmatorul_pas_incepe_cu": "The next step starts with a conversation",
+      "hai_sa_ti_punem": "Let’s put your business in the spotlight.",
+      "spune_ne_cu_ce": "Tell us what you do and where you want to go. Together we can shape an online presence that represents you.",
+      "completeaza_cererea_de_site": "Fill in the site request",
+      "scrie_ne_pe_whatsapp": "Message us on WhatsApp",
+      "copyright": "© 2026 Shine Digital. A good idea deserves to be seen.",
+      "inapoi_la_poveste": "Back to the story ↑",
+      "scrie_ne_pe": "Chat on",
+      "language": "Language",
+      "pkg_none": "Not chosen yet",
+      "bud_none": "Not set yet",
+      "bud_1": "Under $500",
+      "bud_2": "$500–$1,000",
+      "bud_3": "$1,000–$2,000",
+      "bud_4": "Over $2,000",
+      "m_to": "To",
+      "m_subject": "Subject",
+      "m_subject_pre": "Website request",
+      "m_pkg": "Chosen package",
+      "m_company": "Company name",
+      "m_field": "Line of business",
+      "m_city": "City",
+      "m_contact": "Contact person",
+      "m_email": "Email address",
+      "m_phone": "Phone",
+      "m_budget": "Estimated budget",
+      "m_want": "What I want from the website",
+      "copy_ok": "Copied",
+      "copy_sel": "Text selected",
+      "copy_default": "Copy message",
+      "wa_text": "Hi! I saw Shine Digital and I'd like a website for my business.",
+      "motion_graphics": "Motion graphics and animations for your site",
+    };
+    ro.pkg_essential = 'Essential — ' + ron(RON.e) + ' RON';
+    ro.pkg_signature = 'Signature — ' + ron(RON.s) + ' RON';
+    ro.pkg_visibility = 'Visibility — ' + ron(RON.v) + ' RON';
+    ro.faq_price_a = 'Cele trei pachete costă ' + ron(RON.e) + ', ' + ron(RON.s) + ' și ' + ron(RON.v) + ' RON. Consultă ofertele de mai sus pentru a vedea ce include fiecare. Cerințele suplimentare și costurile recurente sunt stabilite înainte de achiziție.';
+    en.pkg_essential = 'Essential — $' + usd(USD.e);
+    en.pkg_signature = 'Signature — $' + usd(USD.s);
+    en.pkg_visibility = 'Visibility — $' + usd(USD.v);
+    en.faq_price_a = 'The three packages cost $' + usd(USD.e) + ', $' + usd(USD.s) + ' and $' + usd(USD.v) + '. Check the packages above to see what each one includes. Extra requirements and recurring costs are agreed before purchase.';
+    this._dict = {
+      ro: ro,
+      en: en,
+      price: {
+        ro: { cur: '', unit: 'RON', e: ron(RON.e), s: ron(RON.s), v: ron(RON.v), pcOff: 's-pc-off' },
+        en: { cur: '$', unit: 'USD', e: usd(USD.e), s: usd(USD.s), v: usd(USD.v), pcOff: '' }
+      }
+    };
+    return this._dict;
+  }
+  componentDidMount() {
+    var self = this;
+    this._waRaf = 0;
+    this._waCheck = function () {
+      self._waRaf = 0;
+      try {
+        var vh = window.innerHeight || (document.documentElement && document.documentElement.clientHeight) || 0;
+        var hide = false;
+        var ids = ['cere-un-site', 's-final'];
+        for (var i = 0; i < ids.length; i++) {
+          var el = document.getElementById(ids[i]);
+          if (!el) continue;
+          var r = el.getBoundingClientRect();
+          if (r.top < vh - 120 && r.bottom > 40) hide = true;
+        }
+        if (hide !== self.state.waHidden) self.setState({ waHidden: hide });
+      } catch (err) {}
+    };
+    this._waQueue = function () {
+      if (self._waRaf) return;
+      try { self._waRaf = window.requestAnimationFrame(self._waCheck); } catch (err) { self._waCheck(); }
+    };
+    try {
+      document.addEventListener('scroll', this._waQueue, { capture: true, passive: true });
+      window.addEventListener('resize', this._waQueue);
+    } catch (err) {}
+    this._waQueue();
+  }
+  componentWillUnmount() {
+    try {
+      document.removeEventListener('scroll', this._waQueue, { capture: true });
+      window.removeEventListener('resize', this._waQueue);
+      if (this._waRaf) window.cancelAnimationFrame(this._waRaf);
+    } catch (err) {}
+  }
+  renderVals() {
+    var self = this;
+    var d = this.dict();
+    var lang = this.state.lang === 'en' ? 'en' : 'ro';
+    var t = d[lang];
+    var calm = function () {
+      try { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (err) { return false; }
+    };
+    var copyLabels = { ok: t.copy_ok, sel: t.copy_sel };
+    // WhatsApp: the number lives here and nowhere else.
+    var WA_NUMBER = '+40760509563';
+    var WA_TEXT = t.wa_text;
+    var waDigits = WA_NUMBER.replace(/\D/g, '');
+    var waHref = 'https://wa.me/' + waDigits + '?text=' + encodeURIComponent(WA_TEXT);
+    var waShown = (waDigits.length === 11 && waDigits.indexOf('40') === 0)
+      ? '+40 ' + waDigits.slice(2, 5) + ' ' + waDigits.slice(5, 8) + ' ' + waDigits.slice(8)
+      : WA_NUMBER;
+    return {
+      menuOpen: this.state.menuOpen,
+      menuExpanded: this.state.menuOpen ? 'true' : 'false',
+      lang: lang,
+      t: t,
+      price: d.price[lang],
+      roPressed: lang === 'ro' ? 'true' : 'false',
+      enPressed: lang === 'en' ? 'true' : 'false',
+      setRo: function () { self.setState({ lang: 'ro', sent: false, msg: '', mailto: '', copied: '' }); },
+      setEn: function () { self.setState({ lang: 'en', sent: false, msg: '', mailto: '', copied: '' }); },
+      waHref: waHref,
+      waShown: waShown,
+      waClass: this.state.waHidden ? 's-wa-off' : '',
+      sent: this.state.sent,
+      msg: this.state.msg,
+      mailto: this.state.mailto,
+      copyLabel: copyLabels[this.state.copied] || t.copy_default,
+      toggleMenu: function () { self.setState({ menuOpen: !self.state.menuOpen }); },
+      closeMenu: function () { self.setState({ menuOpen: false }); },
+      spot: function (e) {
+        var el = e.currentTarget;
+        if (!el || !el.getBoundingClientRect) return;
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      },
+      tilt: function (e) {
+        if (calm() || (e.pointerType && e.pointerType !== 'mouse')) return;
+        var el = e.currentTarget;
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.setProperty('--ry', (px * 12).toFixed(2) + 'deg');
+        el.style.setProperty('--rx', (-py * 9).toFixed(2) + 'deg');
+      },
+      untilt: function (e) {
+        var el = e.currentTarget;
+        el.style.setProperty('--ry', '0deg');
+        el.style.setProperty('--rx', '0deg');
+      },
+      pick: function (e) {
+        var names = { essential: 'essential', signature: 'signature', visibility: 'visibility' };
+        var pkg = e.currentTarget.getAttribute('data-pkg');
+        var sel = e.currentTarget.ownerDocument.getElementById('f-pkg');
+        if (sel && names[pkg]) sel.value = names[pkg];
+      },
+      submit: function (e) {
+        e.preventDefault();
+        var f = e.currentTarget;
+        var doc = f.ownerDocument;
+        var t = self.dict()[self.state.lang === 'en' ? 'en' : 'ro'];
+        var pkgs = { none: t.pkg_none, essential: t.pkg_essential, signature: t.pkg_signature, visibility: t.pkg_visibility };
+        var buds = { none: t.bud_none, b1: t.bud_1, b2: t.bud_2, b3: t.bud_3, b4: t.bud_4 };
+        var val = function (n) {
+          var el = f.elements ? f.elements[n] : null;
+          return el && el.value ? String(el.value).trim() : '';
+        };
+        var body = [
+          t.m_pkg + ': ' + (pkgs[val('pachet')] || t.pkg_none),
+          t.m_company + ': ' + val('companie'),
+          t.m_field + ': ' + val('domeniu'),
+          t.m_city + ': ' + val('localitate'),
+          t.m_contact + ': ' + val('persoana'),
+          t.m_email + ': ' + val('email'),
+          t.m_phone + ': ' + (val('telefon') || '—'),
+          t.m_budget + ': ' + (buds[val('buget')] || t.bud_none),
+          '',
+          t.m_want + ':',
+          val('mesaj')
+        ].join('\n');
+        var subject = t.m_subject_pre + ' — ' + val('companie');
+        var mailto = 'mailto:contact@shinedigital.ro?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.replace(/\n/g, '\r\n'));
+        self.setState({ sent: true, copied: '', mailto: mailto, msg: t.m_to + ': contact@shinedigital.ro\n' + t.m_subject + ': ' + subject + '\n\n' + body });
+        setTimeout(function () {
+          var box = doc.getElementById('s-ok');
+          if (box && box.scrollIntoView) { try { box.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (err) {} }
+        }, 80);
+      },
+      copyMsg: function () {
+        var text = self.state.msg;
+        var flash = function (kind) {
+          self.setState({ copied: kind });
+          setTimeout(function () { self.setState({ copied: '' }); }, 2400);
+        };
+        var pick = function () {
+          try {
+            var pre = document.querySelector('.s-ok-pre');
+            if (pre && window.getSelection && document.createRange) {
+              var rng = document.createRange();
+              rng.selectNodeContents(pre);
+              var sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(rng);
+            }
+          } catch (err) {}
+          flash('sel');
+        };
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(function () { flash('ok'); }, pick);
+            return;
+          }
+        } catch (err) {}
+        pick();
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
