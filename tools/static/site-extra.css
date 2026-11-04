@@ -1,0 +1,14 @@
+/* ==== Static-site additions. Appended after the canvas CSS by tools/build-static.js ==== */
+
+/* The canvas host supplied this; a plain page needs it spelled out. */
+[hidden]{display:none!important}
+html{background:#0c0913;color-scheme:dark;scroll-padding-top:76px}
+@media(min-width:920px){html{scroll-padding-top:92px}}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* The RO / EN switch is made of links here (one real page per language). */
+.s-menu-lang a{justify-content:center;letter-spacing:0}
+
+/* 404 page */
+.s-nf{min-height:100vh;display:grid;align-content:center;justify-items:start;gap:22px;padding-block:48px}
+.s-nf .s-cta{margin-top:6px}
