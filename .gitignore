@@ -2,3 +2,8 @@ jscheck.js
 node_modules/
 .DS_Store
 test-shots/
+.env
+.env.*
+!.env.example
+.vercel/
+studio-test-artifacts/

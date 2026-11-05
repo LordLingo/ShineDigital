@@ -1,0 +1,10 @@
+{
+  "name": "shine-digital",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build-static.js && node tools/build-studio.js",
+    "test:studio": "node --test tests/studio.test.cjs",
+    "dev:studio": "node tools/studio-dev.cjs"
+  },
+  "engines": { "node": ">=22" }
+}
