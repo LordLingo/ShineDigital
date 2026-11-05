@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('node:assert/strict');
+const path=require('node:path');
+const fs=require('node:fs');
+const {chromium}=require('playwright');
+const {start}=require('../tools/studio-dev.cjs');
+(async()=>{
+const srv=await start();const browser=await chromium.launch({headless:true});const context=await browser.newContext({viewport:{width:1440,height:1100}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));const out=path.resolve('studio-test-artifacts');fs.mkdirSync(out,{recursive:true});
+try{
+await page.goto(srv.url+'/studio/?demo=1');await page.getByRole('heading',{name:'A good day to grow.'}).waitFor();assert.equal(await page.locator('tbody tr').count(),5);await page.screenshot({path:path.join(out,'dashboard-desktop.png'),fullPage:true});
+await page.getByRole('button',{name:/Businesses/}).click();await page.getByRole('textbox',{name:'Search businesses'}).fill('Volt');assert.equal(await page.locator('tbody tr').count(),1);await page.getByRole('textbox',{name:'Search businesses'}).fill('');
+await page.getByRole('button',{name:'Add business',exact:true}).first().click();await page.getByLabel('Business name',{exact:true}).fill('Test Electric <script>');await page.getByLabel('Business phone',{exact:true}).fill('+40712345678');await page.getByLabel('Confirmed services').fill('Montaj prize\nVerificarea instalațiilor');await page.getByRole('checkbox',{name:'These business details are verified.'}).check();await page.getByRole('button',{name:'Save & create preview'}).click();await page.locator('#editor').waitFor({state:'hidden'});assert.equal(await page.locator('tbody tr').count(),6);
+const lead=await page.evaluate(()=>JSON.parse(localStorage.getItem('shine-studio-demo-v1')).find(l=>l.name==='Test Electric <script>'));assert(lead.preview_enabled);assert.equal(lead.preview_content.services.length,2);
+await page.reload();await page.getByRole('heading',{name:'A good day to grow.'}).waitFor();await page.getByRole('button',{name:'Test Electric <script>',exact:true}).click();await page.getByRole('tab',{name:'Website copy'}).click();await page.getByLabel('Headline',{exact:true}).fill('A draft headline');await page.getByRole('button',{name:'Save business',exact:true}).click();await page.locator('#editor').waitFor({state:'hidden'});
+let stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('shine-studio-demo-v1')).find(l=>l.name==='Test Electric <script>'));assert.notEqual(stored.preview_content.headline,'A draft headline');
+const preview=await context.newPage();preview.on('pageerror',e=>errors.push(e.message));await preview.goto(srv.url+'/preview/?demo='+lead.id);await preview.locator('.hero h1').waitFor();assert(!await preview.locator('script:not([src])').count());await preview.screenshot({path:path.join(out,'preview-modern-desktop.png'),fullPage:true});
+for(const [name,style] of [['Clasic','classic'],['Contrast','bold'],['Modern','modern']]){await preview.getByRole('button',{name:'Schimbă stilul'}).click();await preview.getByRole('button',{name:new RegExp(name)}).click();assert.equal(await preview.locator('.site').getAttribute('class'),'site '+style);await preview.screenshot({path:path.join(out,'preview-'+style+'.png'),fullPage:true});}
+await preview.getByRole('button',{name:'Vreau acest site'}).click();await preview.getByRole('status').filter({hasText:'versiunea conectată'}).waitFor();
+await page.getByRole('button',{name:'Previews',exact:true}).click();const card=page.locator('.template-card').filter({hasText:'Test Electric <script>'});await card.getByRole('button',{name:'Turn link off'}).click();await preview.reload();await preview.getByRole('heading',{name:'Previzualizare indisponibilă.'}).waitFor();
+await page.setViewportSize({width:390,height:844});await page.getByRole('button',{name:'Today',exact:true}).click();await page.screenshot({path:path.join(out,'dashboard-mobile.png'),fullPage:true});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+await page.getByRole('button',{name:'Add business',exact:true}).first().click();await page.screenshot({path:path.join(out,'editor-mobile.png'),fullPage:true});await page.getByRole('button',{name:'Close editor'}).click();
+await preview.setViewportSize({width:390,height:844});await preview.goto(srv.url+'/preview/?demo=demo-0');await preview.locator('.hero h1').waitFor();for(const [name,style] of [['Clasic','classic'],['Contrast','bold'],['Modern','modern']]){await preview.getByRole('button',{name:'Schimbă stilul'}).click();await preview.getByRole('button',{name:new RegExp(name)}).click();assert(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await preview.screenshot({path:path.join(out,'preview-'+style+'-mobile.png'),fullPage:true});}
+await preview.setViewportSize({width:320,height:700});assert(await preview.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+assert.deepEqual(errors,[]);console.log('PASS: dashboard, search, business creation, persistence, draft isolation, all three preview styles, disabled links, mobile layouts, and no page errors.');
+}finally{await browser.close();await srv.close();}
+})().catch(e=>{console.error(e);process.exit(1);});
